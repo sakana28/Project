@@ -14,28 +14,28 @@ typedef unsigned char byte;
 void readFile(char *file_name, byte *buffer, int buffer_size);
 void writeFile(char *file_name, byte *buffer, int buffer_size);
 
-static byte input[(WIDTH+2)*(HEIGHT+2)];
-static byte header[54];
+static byte rgb[RGBSIZE + 54];
+static byte rgb_buffer[(HEIGHT + 2) * (WIDTH + 2) * 4] = {0x00};
 
 int main(int argc, char *argv[])
 {
 
     int i, j;
-    byte rgbdata[3];
-    readFile("dog.bmp", header, 54);
-    readFile(argv[1], input, 10000);
-    writeFile(argv[2], header, 54);
-
-    for (i = 0; i < (WIDTH+2)*(HEIGHT+2); i++)
+    int k = 0;
+    fprintf(stderr, "Before read rgb.\n");
+    readFile(argv[1], rgb, RGBSIZE + 54);
+    fprintf(stderr, "After read rgb.\n");
+    for (j = 1; j < HEIGHT + 1; j++)
     {
-      
-            rgbdata[0] = input[i];
-            rgbdata[1] = input[i];
-            rgbdata[2] = input[i];
-            writeFile(argv[2], rgbdata, 3);
+        for (i = 1; i < WIDTH + 1; i++)
+        {
+            rgb_buffer[(i + j * (WIDTH + 2)) * 4+3] = rgb[((i-1) + (j-1) * (WIDTH )) * 3 + 55];
+            rgb_buffer[(i + j * (WIDTH + 2)) * 4+2] = rgb[((i-1) + (j-1) * (WIDTH)) * 3 + 56];
+            rgb_buffer[(i + j * (WIDTH + 2)) * 4+1] = rgb[((i-1) + (j-1) * (WIDTH)) * 3 + 54];
+            rgb_buffer[(i + j * (WIDTH + 2)) * 4] = 0x00;
         }
-
-
+    }
+     writeFile(argv[2], rgb_buffer,(WIDTH+2)*(HEIGHT+2)*4);
     fprintf(stderr, "After write.\n");
 
     return 0;

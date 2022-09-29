@@ -4,12 +4,19 @@ use ieee.std_logic_arith.all;
 use IEEE.std_logic_unsigned.all;
 
 
-entity tb_kontrolle_file is
+entity tb_sobel_file is
 end entity;
 
-architecture rtl of tb_kontrolle_file is
-
-
+architecture rtl of tb_sobel_file is
+    component faltung
+    port (
+    clk_i : in std_logic;
+    data_i : in std_logic_vector (71 downto 0);
+    data_valid_i : in std_logic;
+    sobel_data_o : out std_logic_vector (7 downto 0);
+    sobel_data_valid_o : out std_logic
+  );
+end component;
 
     component kontrolle
     port (
@@ -24,13 +31,26 @@ architecture rtl of tb_kontrolle_file is
   );
 end component;
 
+component rgbtogray
+    port (
+    clk_i : in std_logic;
+    rgbdata_i : in std_logic_vector(31 downto 0);
+    data_valid_i : in std_logic;
+    graydata_o : out std_logic_vector(7 downto 0);
+    graydata_valid_o : out std_logic
+  );
+end component;
+
+
   constant HALF_CLK : time := 5 ns;
   constant width_const : integer := 102;
   constant height_const : integer := 102;
 
   signal clk : std_logic;
   signal rst :std_logic;
-  signal data_tb : std_logic_vector(7 downto 0);
+  signal data_tb : std_logic_vector(31 downto 0);
+  signal data_gray_tb:std_logic_vector(7 downto 0);
+  signal gray_valid_tb :std_logic;
   signal data_kontrolle_out :std_logic_vector(71 downto 0);
   signal data_valid_kontrolle_out: std_logic ;
   signal data_valid_tb : std_logic;
@@ -47,8 +67,8 @@ begin
     port map (
       clk_i => clk,
       rst_i => rst,
-      data_i => data_tb,
-      data_valid_i => data_valid_tb,
+      data_i => data_gray_tb,
+      data_valid_i => gray_valid_tb,
       width_logic_i => conv_std_logic_vector(width_const,10), --102
       data_o => data_kontrolle_out, 
       out_valid_o => data_valid_kontrolle_out,
@@ -56,6 +76,23 @@ begin
     );
   
 
+    faltung_inst : faltung
+    port map (
+      clk_i => clk,
+      data_i => data_kontrolle_out,
+      data_valid_i => data_valid_kontrolle_out,
+      sobel_data_o => sobel_res_tb,
+      sobel_data_valid_o => sobel_res_valid_tb
+    );
+
+    rgbtogray_inst : rgbtogray
+     port map (
+    clk_i => clk,
+    rgbdata_i => data_tb,
+    data_valid_i => data_valid_tb,
+    graydata_o => data_gray_tb,
+    graydata_valid_o => gray_valid_tb
+    );
 
    rst_gen:process 
    begin
@@ -75,13 +112,13 @@ begin
 
   file_read : process
     file read_file : std_file;
-    variable next_vector : bit_vector (0 downto 0);
+    variable next_vector : bit_vector (3 downto 0);
     variable filestatus_rd : file_open_status;
     variable actual_len : natural;
     variable data_count :integer;
   begin
     data_valid_tb <= '0';
-    file_open(filestatus_rd, read_file, "/home/benchmarker/FPGAProject/SobelHDL/tb/stimu_gray_zero_table.txt", read_mode); 
+    file_open(filestatus_rd, read_file, "/home/benchmarker/FPGAProject/SobelHDL/tb/rgb32lena.txt", read_mode); 
     assert filestatus_rd = OPEN_OK
     report "fail to open stimu"
       severity FAILURE;
@@ -90,13 +127,17 @@ begin
     wait for 10 ns;
     for i in 0 to height_const -1 loop
         wait until rising_edge(clk);
-        wait for 2 ns;
+        wait for 5 ns;
        data_valid_tb <= '1';
 
-        for i in 0 to width_const-1 loop 
+        for j in 0 to width_const-1 loop 
             data_valid_tb <= '1';
             read(read_file, next_vector, actual_len);
-            data_tb <= conv_std_logic_vector(bit'pos(next_vector(0)), 8);
+            data_tb <=
+            conv_std_logic_vector(bit'pos(next_vector(0)), 8) &
+            conv_std_logic_vector(bit'pos(next_vector(1)), 8) &
+            conv_std_logic_vector(bit'pos(next_vector(2)), 8) &
+            conv_std_logic_vector(bit'pos(next_vector(3)), 8);
             data_count := data_count+1;
             wait for 10 ns;
         end loop; 
@@ -117,20 +158,18 @@ begin
     variable output_vector : bit_vector(7 downto 0);
     variable data_count :integer;
   begin
-    file_open(filestatus_wr, result_file, "/home/benchmarker/FPGAProject/SobelHDL/syssim_table_out.txt", write_mode);
+    file_open(filestatus_wr, result_file, "/home/benchmarker/FPGAProject/SobelHDL/output_sobel_lena.txt", write_mode);
     data_count := 0;
     assert filestatus_wr = OPEN_OK
     report "fail to open target"
       severity FAILURE;
     while data_count < (width_const-2)*(width_const-2) loop
-      wait until rising_edge(clk) and data_valid_kontrolle_out = '1';
+      wait until rising_edge(clk) and sobel_res_valid_tb = '1';
       varstd_output := sobel_res_tb;
       next_vector := character'val(conv_integer(varstd_output));
       write(result_file, next_vector);
       data_count := data_count+1;
     end loop;
-
-
 
     file_close(result_file);
     wait;
