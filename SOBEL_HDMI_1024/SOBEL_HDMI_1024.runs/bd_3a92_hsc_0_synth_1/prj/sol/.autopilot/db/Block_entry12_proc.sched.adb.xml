@@ -1,0 +1,114 @@
+<stg><name>Block_entry12_proc</name>
+
+
+<trans_list>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="2" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="2" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="0">
+<![CDATA[
+newFuncRoot:0 %specstablecontent_ln0 = specstablecontent void @_ssdm_op_SpecStableContent, i8 %ColorModeOut, void 
+
+]]></Node>
+<StgValue><ssdm name="specstablecontent_ln0"/></StgValue>
+</operation>
+
+<operation id="3" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="3" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+newFuncRoot:1 %ColorModeOut_read = read i8 @_ssdm_op_Read.ap_auto.i8P0A, i8 %ColorModeOut
+
+]]></Node>
+<StgValue><ssdm name="ColorModeOut_read"/></StgValue>
+</operation>
+
+<operation id="4" st_id="1" stage="1" lat="1">
+<core>Cmp</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="4" bw="1" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+newFuncRoot:2 %icmp_ln115 = icmp_ne  i8 %ColorModeOut_read, i8 2
+
+]]></Node>
+<StgValue><ssdm name="icmp_ln115"/></StgValue>
+</operation>
+
+<operation id="5" st_id="1" stage="1" lat="1">
+<core>Cmp</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="5" bw="1" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+newFuncRoot:3 %icmp_ln115_1 = icmp_ne  i8 %ColorModeOut_read, i8 3
+
+]]></Node>
+<StgValue><ssdm name="icmp_ln115_1"/></StgValue>
+</operation>
+
+<operation id="6" st_id="1" stage="1" lat="1">
+<core>LogicGate</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="6" bw="1" op_0_bw="1" op_1_bw="1">
+<![CDATA[
+newFuncRoot:4 %bPassThruHcr2 = and i1 %icmp_ln115_1, i1 %icmp_ln115
+
+]]></Node>
+<StgValue><ssdm name="bPassThruHcr2"/></StgValue>
+</operation>
+
+<operation id="7" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="7" bw="0" op_0_bw="1">
+<![CDATA[
+newFuncRoot:5 %ret_ln115 = ret i1 %bPassThruHcr2
+
+]]></Node>
+<StgValue><ssdm name="ret_ln115"/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+</ports>
+
+
+<dataflows>
+</dataflows>
+
+
+</stg>

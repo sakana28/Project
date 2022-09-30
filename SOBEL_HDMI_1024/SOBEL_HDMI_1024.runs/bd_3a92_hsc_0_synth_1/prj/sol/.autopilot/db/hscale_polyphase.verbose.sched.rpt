@@ -1,0 +1,477 @@
+
+
+================================================================
+== Vitis HLS Report for 'hscale_polyphase'
+================================================================
+* Date:           Mon Aug 29 12:25:37 2022
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        prj
+* Solution:       sol (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.62 ns|  3.589 ns|     1.52 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |       15|       15|  84.375 ns|  84.375 ns|    1|    1|      yes|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 16
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 16
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 16, States = { 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.51>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%p_read = read i2 @_ssdm_op_Read.ap_auto.i2, i2 %p_read2425"   --->   Operation 17 'read' 'p_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%PhasesH_0_read_1 = read i6 @_ssdm_op_Read.ap_auto.i6, i6 %PhasesH_0_read"   --->   Operation 18 'read' 'PhasesH_0_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%p_read_5 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_read23"   --->   Operation 19 'read' 'p_read_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%p_read_6 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_read22"   --->   Operation 20 'read' 'p_read_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%p_read_7 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_read21"   --->   Operation 21 'read' 'p_read_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%p_read_8 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_read20"   --->   Operation 22 'read' 'p_read_8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%p_read_9 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_read19"   --->   Operation 23 'read' 'p_read_9' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%p_read_10 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_read18"   --->   Operation 24 'read' 'p_read_10' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%p_read_11 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_read17"   --->   Operation 25 'read' 'p_read_11' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%p_read_12 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_read16"   --->   Operation 26 'read' 'p_read_12' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%p_read_13 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_read15"   --->   Operation 27 'read' 'p_read_13' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%p_read_14 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_read14"   --->   Operation 28 'read' 'p_read_14' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%p_read_15 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_read13"   --->   Operation 29 'read' 'p_read_15' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%p_read_16 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_read12"   --->   Operation 30 'read' 'p_read_16' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%p_read_17 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_read11"   --->   Operation 31 'read' 'p_read_17' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%p_read_18 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_read10"   --->   Operation 32 'read' 'p_read_18' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%p_read_19 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_read9"   --->   Operation 33 'read' 'p_read_19' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%p_read_20 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_read8"   --->   Operation 34 'read' 'p_read_20' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%p_read_21 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_read7"   --->   Operation 35 'read' 'p_read_21' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%p_read_22 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_read6"   --->   Operation 36 'read' 'p_read_22' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%p_read_23 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_read5"   --->   Operation 37 'read' 'p_read_23' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%p_read_24 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_read4"   --->   Operation 38 'read' 'p_read_24' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%p_read_25 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_read3"   --->   Operation 39 'read' 'p_read_25' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%p_read2425_cast = zext i2 %p_read"   --->   Operation 40 'zext' 'p_read2425_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (1.56ns)   --->   "%idx = add i3 %p_read2425_cast, i3 1" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:946]   --->   Operation 41 'add' 'idx' <Predicate = true> <Delay = 1.56> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.56> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%idxprom8 = zext i6 %PhasesH_0_read_1"   --->   Operation 42 'zext' 'idxprom8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%FiltCoeff_0_addr = getelementptr i16 %FiltCoeff_0, i64 0, i64 %idxprom8" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:951]   --->   Operation 43 'getelementptr' 'FiltCoeff_0_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [2/2] (2.32ns)   --->   "%FiltCoeffRead = load i6 %FiltCoeff_0_addr" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:951]   --->   Operation 44 'load' 'FiltCoeffRead' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1P_LUTRAM">   --->   Core 87 'RAM_1P_LUTRAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 16> <Depth = 64> <RAM>
+ST_1 : Operation 45 [1/1] (1.94ns)   --->   "%lhs = mux i8 @_ssdm_op_Mux.ap_auto.5i8.i3, i8 0, i8 %p_read_25, i8 %p_read_22, i8 %p_read_19, i8 %p_read_16, i3 %idx"   --->   Operation 45 'mux' 'lhs' <Predicate = true> <Delay = 1.94> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 46 [1/1] (1.94ns)   --->   "%lhs_2 = mux i8 @_ssdm_op_Mux.ap_auto.5i8.i3, i8 0, i8 %p_read_22, i8 %p_read_19, i8 %p_read_16, i8 %p_read_13, i3 %idx"   --->   Operation 46 'mux' 'lhs_2' <Predicate = true> <Delay = 1.94> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 47 [1/1] (1.94ns)   --->   "%lhs_3 = mux i8 @_ssdm_op_Mux.ap_auto.5i8.i3, i8 0, i8 %p_read_19, i8 %p_read_16, i8 %p_read_13, i8 %p_read_10, i3 %idx"   --->   Operation 47 'mux' 'lhs_3' <Predicate = true> <Delay = 1.94> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 48 [1/1] (1.94ns)   --->   "%lhs_4 = mux i8 @_ssdm_op_Mux.ap_auto.5i8.i3, i8 0, i8 %p_read_16, i8 %p_read_13, i8 %p_read_10, i8 %p_read_7, i3 %idx"   --->   Operation 48 'mux' 'lhs_4' <Predicate = true> <Delay = 1.94> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 49 [1/1] (1.82ns)   --->   "%lhs_5 = mux i8 @_ssdm_op_Mux.ap_auto.4i8.i3, i8 0, i8 %p_read_13, i8 %p_read_10, i8 %p_read_7, i3 %idx"   --->   Operation 49 'mux' 'lhs_5' <Predicate = true> <Delay = 1.82> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 50 [1/1] (1.70ns)   --->   "%lhs_6 = mux i8 @_ssdm_op_Mux.ap_auto.3i8.i3, i8 0, i8 %p_read_10, i8 %p_read_7, i3 %idx"   --->   Operation 50 'mux' 'lhs_6' <Predicate = true> <Delay = 1.70> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 1.70> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 51 [1/1] (1.94ns)   --->   "%tmp_6 = mux i8 @_ssdm_op_Mux.ap_auto.5i8.i3, i8 0, i8 %p_read_24, i8 %p_read_21, i8 %p_read_18, i8 %p_read_15, i3 %idx"   --->   Operation 51 'mux' 'tmp_6' <Predicate = true> <Delay = 1.94> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 52 [1/1] (1.94ns)   --->   "%tmp_7 = mux i8 @_ssdm_op_Mux.ap_auto.5i8.i3, i8 0, i8 %p_read_21, i8 %p_read_18, i8 %p_read_15, i8 %p_read_12, i3 %idx"   --->   Operation 52 'mux' 'tmp_7' <Predicate = true> <Delay = 1.94> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 53 [1/1] (1.94ns)   --->   "%tmp_8 = mux i8 @_ssdm_op_Mux.ap_auto.5i8.i3, i8 0, i8 %p_read_18, i8 %p_read_15, i8 %p_read_12, i8 %p_read_9, i3 %idx"   --->   Operation 53 'mux' 'tmp_8' <Predicate = true> <Delay = 1.94> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 54 [1/1] (1.94ns)   --->   "%tmp_9 = mux i8 @_ssdm_op_Mux.ap_auto.5i8.i3, i8 0, i8 %p_read_15, i8 %p_read_12, i8 %p_read_9, i8 %p_read_6, i3 %idx"   --->   Operation 54 'mux' 'tmp_9' <Predicate = true> <Delay = 1.94> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 55 [1/1] (1.82ns)   --->   "%tmp_1 = mux i8 @_ssdm_op_Mux.ap_auto.4i8.i3, i8 0, i8 %p_read_12, i8 %p_read_9, i8 %p_read_6, i3 %idx"   --->   Operation 55 'mux' 'tmp_1' <Predicate = true> <Delay = 1.82> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 56 [1/1] (1.70ns)   --->   "%tmp_s = mux i8 @_ssdm_op_Mux.ap_auto.3i8.i3, i8 0, i8 %p_read_9, i8 %p_read_6, i3 %idx"   --->   Operation 56 'mux' 'tmp_s' <Predicate = true> <Delay = 1.70> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 1.70> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 57 [1/1] (1.94ns)   --->   "%tmp_2 = mux i8 @_ssdm_op_Mux.ap_auto.5i8.i3, i8 0, i8 %p_read_23, i8 %p_read_20, i8 %p_read_17, i8 %p_read_14, i3 %idx"   --->   Operation 57 'mux' 'tmp_2' <Predicate = true> <Delay = 1.94> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 58 [1/1] (1.94ns)   --->   "%tmp_3 = mux i8 @_ssdm_op_Mux.ap_auto.5i8.i3, i8 0, i8 %p_read_20, i8 %p_read_17, i8 %p_read_14, i8 %p_read_11, i3 %idx"   --->   Operation 58 'mux' 'tmp_3' <Predicate = true> <Delay = 1.94> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 59 [1/1] (1.94ns)   --->   "%tmp_4 = mux i8 @_ssdm_op_Mux.ap_auto.5i8.i3, i8 0, i8 %p_read_17, i8 %p_read_14, i8 %p_read_11, i8 %p_read_8, i3 %idx"   --->   Operation 59 'mux' 'tmp_4' <Predicate = true> <Delay = 1.94> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 60 [1/1] (1.94ns)   --->   "%tmp_5 = mux i8 @_ssdm_op_Mux.ap_auto.5i8.i3, i8 0, i8 %p_read_14, i8 %p_read_11, i8 %p_read_8, i8 %p_read_5, i3 %idx"   --->   Operation 60 'mux' 'tmp_5' <Predicate = true> <Delay = 1.94> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 61 [1/1] (1.82ns)   --->   "%tmp_10 = mux i8 @_ssdm_op_Mux.ap_auto.4i8.i3, i8 0, i8 %p_read_11, i8 %p_read_8, i8 %p_read_5, i3 %idx"   --->   Operation 61 'mux' 'tmp_10' <Predicate = true> <Delay = 1.82> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 62 [1/1] (1.70ns)   --->   "%tmp_11 = mux i8 @_ssdm_op_Mux.ap_auto.3i8.i3, i8 0, i8 %p_read_8, i8 %p_read_5, i3 %idx"   --->   Operation 62 'mux' 'tmp_11' <Predicate = true> <Delay = 1.70> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 1.70> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+
+State 2 <SV = 1> <Delay = 3.37>
+ST_2 : Operation 63 [1/2] (2.32ns)   --->   "%FiltCoeffRead = load i6 %FiltCoeff_0_addr" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:951]   --->   Operation 63 'load' 'FiltCoeffRead' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1P_LUTRAM">   --->   Core 87 'RAM_1P_LUTRAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 16> <Depth = 64> <RAM>
+ST_2 : Operation 64 [1/1] (0.00ns)   --->   "%zext_ln232 = zext i8 %lhs"   --->   Operation 64 'zext' 'zext_ln232' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 65 [1/1] (0.00ns)   --->   "%sext_ln1540 = sext i16 %FiltCoeffRead"   --->   Operation 65 'sext' 'sext_ln1540' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 66 [3/3] (1.05ns) (grouped into DSP with root node sum_18)   --->   "%ret_V = mul i24 %zext_ln232, i24 %sext_ln1540"   --->   Operation 66 'mul' 'ret_V' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 67 [1/1] (0.00ns)   --->   "%zext_ln1540 = zext i8 %tmp_6"   --->   Operation 67 'zext' 'zext_ln1540' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 68 [3/3] (1.05ns) (grouped into DSP with root node sum_23)   --->   "%ret_V_10 = mul i24 %zext_ln1540, i24 %sext_ln1540"   --->   Operation 68 'mul' 'ret_V_10' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 69 [1/1] (0.00ns)   --->   "%zext_ln1540_6 = zext i8 %tmp_2"   --->   Operation 69 'zext' 'zext_ln1540_6' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 70 [3/3] (1.05ns) (grouped into DSP with root node sum_28)   --->   "%ret_V_16 = mul i24 %zext_ln1540_6, i24 %sext_ln1540"   --->   Operation 70 'mul' 'ret_V_16' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 3 <SV = 2> <Delay = 2.32>
+ST_3 : Operation 71 [1/1] (0.00ns)   --->   "%FiltCoeff_1_addr = getelementptr i16 %FiltCoeff_1, i64 0, i64 %idxprom8" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:951]   --->   Operation 71 'getelementptr' 'FiltCoeff_1_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 72 [2/2] (2.32ns)   --->   "%FiltCoeffRead_1 = load i6 %FiltCoeff_1_addr" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:951]   --->   Operation 72 'load' 'FiltCoeffRead_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1P_LUTRAM">   --->   Core 87 'RAM_1P_LUTRAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 16> <Depth = 64> <RAM>
+ST_3 : Operation 73 [2/3] (1.05ns) (grouped into DSP with root node sum_18)   --->   "%ret_V = mul i24 %zext_ln232, i24 %sext_ln1540"   --->   Operation 73 'mul' 'ret_V' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 74 [2/3] (1.05ns) (grouped into DSP with root node sum_23)   --->   "%ret_V_10 = mul i24 %zext_ln1540, i24 %sext_ln1540"   --->   Operation 74 'mul' 'ret_V_10' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 75 [2/3] (1.05ns) (grouped into DSP with root node sum_28)   --->   "%ret_V_16 = mul i24 %zext_ln1540_6, i24 %sext_ln1540"   --->   Operation 75 'mul' 'ret_V_16' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 4 <SV = 3> <Delay = 3.37>
+ST_4 : Operation 76 [1/2] (2.32ns)   --->   "%FiltCoeffRead_1 = load i6 %FiltCoeff_1_addr" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:951]   --->   Operation 76 'load' 'FiltCoeffRead_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1P_LUTRAM">   --->   Core 87 'RAM_1P_LUTRAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 16> <Depth = 64> <RAM>
+ST_4 : Operation 77 [1/3] (0.00ns) (grouped into DSP with root node sum_18)   --->   "%ret_V = mul i24 %zext_ln232, i24 %sext_ln1540"   --->   Operation 77 'mul' 'ret_V' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 78 [1/1] (0.00ns)   --->   "%zext_ln232_4 = zext i8 %lhs_2"   --->   Operation 78 'zext' 'zext_ln232_4' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 79 [1/1] (0.00ns)   --->   "%sext_ln1540_1 = sext i16 %FiltCoeffRead_1"   --->   Operation 79 'sext' 'sext_ln1540_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 80 [3/3] (1.05ns) (grouped into DSP with root node sum_19)   --->   "%ret_V_5 = mul i24 %zext_ln232_4, i24 %sext_ln1540_1"   --->   Operation 80 'mul' 'ret_V_5' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 81 [2/2] (2.10ns) (root node of the DSP)   --->   "%sum_18 = add i24 %ret_V, i24 2048" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:965]   --->   Operation 81 'add' 'sum_18' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 82 [1/3] (0.00ns) (grouped into DSP with root node sum_23)   --->   "%ret_V_10 = mul i24 %zext_ln1540, i24 %sext_ln1540"   --->   Operation 82 'mul' 'ret_V_10' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 83 [1/1] (0.00ns)   --->   "%zext_ln1540_1 = zext i8 %tmp_7"   --->   Operation 83 'zext' 'zext_ln1540_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 84 [3/3] (1.05ns) (grouped into DSP with root node sum_24)   --->   "%ret_V_11 = mul i24 %zext_ln1540_1, i24 %sext_ln1540_1"   --->   Operation 84 'mul' 'ret_V_11' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 85 [2/2] (2.10ns) (root node of the DSP)   --->   "%sum_23 = add i24 %ret_V_10, i24 2048" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:965]   --->   Operation 85 'add' 'sum_23' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 86 [1/3] (0.00ns) (grouped into DSP with root node sum_28)   --->   "%ret_V_16 = mul i24 %zext_ln1540_6, i24 %sext_ln1540"   --->   Operation 86 'mul' 'ret_V_16' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 87 [1/1] (0.00ns)   --->   "%zext_ln1540_7 = zext i8 %tmp_3"   --->   Operation 87 'zext' 'zext_ln1540_7' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 88 [3/3] (1.05ns) (grouped into DSP with root node sum_29)   --->   "%ret_V_17 = mul i24 %zext_ln1540_7, i24 %sext_ln1540_1"   --->   Operation 88 'mul' 'ret_V_17' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 89 [2/2] (2.10ns) (root node of the DSP)   --->   "%sum_28 = add i24 %ret_V_16, i24 2048" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:965]   --->   Operation 89 'add' 'sum_28' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 5 <SV = 4> <Delay = 2.32>
+ST_5 : Operation 90 [1/1] (0.00ns)   --->   "%FiltCoeff_2_addr = getelementptr i16 %FiltCoeff_2, i64 0, i64 %idxprom8" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:951]   --->   Operation 90 'getelementptr' 'FiltCoeff_2_addr' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 91 [2/2] (2.32ns)   --->   "%FiltCoeffRead_2 = load i6 %FiltCoeff_2_addr" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:951]   --->   Operation 91 'load' 'FiltCoeffRead_2' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1P_LUTRAM">   --->   Core 87 'RAM_1P_LUTRAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 16> <Depth = 64> <RAM>
+ST_5 : Operation 92 [2/3] (1.05ns) (grouped into DSP with root node sum_19)   --->   "%ret_V_5 = mul i24 %zext_ln232_4, i24 %sext_ln1540_1"   --->   Operation 92 'mul' 'ret_V_5' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 93 [1/2] (2.10ns) (root node of the DSP)   --->   "%sum_18 = add i24 %ret_V, i24 2048" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:965]   --->   Operation 93 'add' 'sum_18' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 94 [2/3] (1.05ns) (grouped into DSP with root node sum_24)   --->   "%ret_V_11 = mul i24 %zext_ln1540_1, i24 %sext_ln1540_1"   --->   Operation 94 'mul' 'ret_V_11' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 95 [1/2] (2.10ns) (root node of the DSP)   --->   "%sum_23 = add i24 %ret_V_10, i24 2048" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:965]   --->   Operation 95 'add' 'sum_23' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 96 [2/3] (1.05ns) (grouped into DSP with root node sum_29)   --->   "%ret_V_17 = mul i24 %zext_ln1540_7, i24 %sext_ln1540_1"   --->   Operation 96 'mul' 'ret_V_17' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 97 [1/2] (2.10ns) (root node of the DSP)   --->   "%sum_28 = add i24 %ret_V_16, i24 2048" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:965]   --->   Operation 97 'add' 'sum_28' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 6 <SV = 5> <Delay = 3.37>
+ST_6 : Operation 98 [1/2] (2.32ns)   --->   "%FiltCoeffRead_2 = load i6 %FiltCoeff_2_addr" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:951]   --->   Operation 98 'load' 'FiltCoeffRead_2' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1P_LUTRAM">   --->   Core 87 'RAM_1P_LUTRAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 16> <Depth = 64> <RAM>
+ST_6 : Operation 99 [1/3] (0.00ns) (grouped into DSP with root node sum_19)   --->   "%ret_V_5 = mul i24 %zext_ln232_4, i24 %sext_ln1540_1"   --->   Operation 99 'mul' 'ret_V_5' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 100 [1/1] (0.00ns) (grouped into DSP with root node sum_19)   --->   "%sext_ln956 = sext i24 %ret_V_5" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:956]   --->   Operation 100 'sext' 'sext_ln956' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 101 [1/1] (0.00ns)   --->   "%zext_ln232_5 = zext i8 %lhs_3"   --->   Operation 101 'zext' 'zext_ln232_5' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 102 [1/1] (0.00ns)   --->   "%sext_ln1540_2 = sext i16 %FiltCoeffRead_2"   --->   Operation 102 'sext' 'sext_ln1540_2' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 103 [3/3] (1.05ns) (grouped into DSP with root node sum_20)   --->   "%ret_V_6 = mul i24 %zext_ln232_5, i24 %sext_ln1540_2"   --->   Operation 103 'mul' 'ret_V_6' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 104 [1/1] (0.00ns)   --->   "%sext_ln965_1 = sext i24 %sum_18" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:965]   --->   Operation 104 'sext' 'sext_ln965_1' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 105 [2/2] (2.10ns) (root node of the DSP)   --->   "%sum_19 = add i25 %sext_ln965_1, i25 %sext_ln956" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:965]   --->   Operation 105 'add' 'sum_19' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 106 [1/3] (0.00ns) (grouped into DSP with root node sum_24)   --->   "%ret_V_11 = mul i24 %zext_ln1540_1, i24 %sext_ln1540_1"   --->   Operation 106 'mul' 'ret_V_11' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 107 [1/1] (0.00ns) (grouped into DSP with root node sum_24)   --->   "%sext_ln956_4 = sext i24 %ret_V_11" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:956]   --->   Operation 107 'sext' 'sext_ln956_4' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 108 [1/1] (0.00ns)   --->   "%zext_ln1540_2 = zext i8 %tmp_8"   --->   Operation 108 'zext' 'zext_ln1540_2' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 109 [3/3] (1.05ns) (grouped into DSP with root node sum_25)   --->   "%ret_V_12 = mul i24 %zext_ln1540_2, i24 %sext_ln1540_2"   --->   Operation 109 'mul' 'ret_V_12' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 110 [1/1] (0.00ns)   --->   "%sext_ln965_5 = sext i24 %sum_23" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:965]   --->   Operation 110 'sext' 'sext_ln965_5' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 111 [2/2] (2.10ns) (root node of the DSP)   --->   "%sum_24 = add i25 %sext_ln965_5, i25 %sext_ln956_4" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:965]   --->   Operation 111 'add' 'sum_24' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 112 [1/3] (0.00ns) (grouped into DSP with root node sum_29)   --->   "%ret_V_17 = mul i24 %zext_ln1540_7, i24 %sext_ln1540_1"   --->   Operation 112 'mul' 'ret_V_17' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 113 [1/1] (0.00ns) (grouped into DSP with root node sum_29)   --->   "%sext_ln956_8 = sext i24 %ret_V_17" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:956]   --->   Operation 113 'sext' 'sext_ln956_8' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 114 [1/1] (0.00ns)   --->   "%zext_ln1540_8 = zext i8 %tmp_4"   --->   Operation 114 'zext' 'zext_ln1540_8' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 115 [3/3] (1.05ns) (grouped into DSP with root node sum_30)   --->   "%ret_V_18 = mul i24 %zext_ln1540_8, i24 %sext_ln1540_2"   --->   Operation 115 'mul' 'ret_V_18' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 116 [1/1] (0.00ns)   --->   "%sext_ln965_9 = sext i24 %sum_28" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:965]   --->   Operation 116 'sext' 'sext_ln965_9' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 117 [2/2] (2.10ns) (root node of the DSP)   --->   "%sum_29 = add i25 %sext_ln965_9, i25 %sext_ln956_8" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:965]   --->   Operation 117 'add' 'sum_29' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 7 <SV = 6> <Delay = 2.32>
+ST_7 : Operation 118 [1/1] (0.00ns)   --->   "%FiltCoeff_3_addr = getelementptr i16 %FiltCoeff_3, i64 0, i64 %idxprom8" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:951]   --->   Operation 118 'getelementptr' 'FiltCoeff_3_addr' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 119 [2/2] (2.32ns)   --->   "%FiltCoeffRead_3 = load i6 %FiltCoeff_3_addr" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:951]   --->   Operation 119 'load' 'FiltCoeffRead_3' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1P_LUTRAM">   --->   Core 87 'RAM_1P_LUTRAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 16> <Depth = 64> <RAM>
+ST_7 : Operation 120 [2/3] (1.05ns) (grouped into DSP with root node sum_20)   --->   "%ret_V_6 = mul i24 %zext_ln232_5, i24 %sext_ln1540_2"   --->   Operation 120 'mul' 'ret_V_6' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 121 [1/2] (2.10ns) (root node of the DSP)   --->   "%sum_19 = add i25 %sext_ln965_1, i25 %sext_ln956" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:965]   --->   Operation 121 'add' 'sum_19' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 122 [2/3] (1.05ns) (grouped into DSP with root node sum_25)   --->   "%ret_V_12 = mul i24 %zext_ln1540_2, i24 %sext_ln1540_2"   --->   Operation 122 'mul' 'ret_V_12' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 123 [1/2] (2.10ns) (root node of the DSP)   --->   "%sum_24 = add i25 %sext_ln965_5, i25 %sext_ln956_4" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:965]   --->   Operation 123 'add' 'sum_24' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 124 [2/3] (1.05ns) (grouped into DSP with root node sum_30)   --->   "%ret_V_18 = mul i24 %zext_ln1540_8, i24 %sext_ln1540_2"   --->   Operation 124 'mul' 'ret_V_18' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 125 [1/2] (2.10ns) (root node of the DSP)   --->   "%sum_29 = add i25 %sext_ln965_9, i25 %sext_ln956_8" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:965]   --->   Operation 125 'add' 'sum_29' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 8 <SV = 7> <Delay = 3.37>
+ST_8 : Operation 126 [1/2] (2.32ns)   --->   "%FiltCoeffRead_3 = load i6 %FiltCoeff_3_addr" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:951]   --->   Operation 126 'load' 'FiltCoeffRead_3' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1P_LUTRAM">   --->   Core 87 'RAM_1P_LUTRAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 16> <Depth = 64> <RAM>
+ST_8 : Operation 127 [1/3] (0.00ns) (grouped into DSP with root node sum_20)   --->   "%ret_V_6 = mul i24 %zext_ln232_5, i24 %sext_ln1540_2"   --->   Operation 127 'mul' 'ret_V_6' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 128 [1/1] (0.00ns) (grouped into DSP with root node sum_20)   --->   "%sext_ln956_1 = sext i24 %ret_V_6" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:956]   --->   Operation 128 'sext' 'sext_ln956_1' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 129 [1/1] (0.00ns)   --->   "%zext_ln232_6 = zext i8 %lhs_4"   --->   Operation 129 'zext' 'zext_ln232_6' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 130 [1/1] (0.00ns)   --->   "%sext_ln1540_3 = sext i16 %FiltCoeffRead_3"   --->   Operation 130 'sext' 'sext_ln1540_3' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 131 [3/3] (1.05ns) (grouped into DSP with root node sum_21)   --->   "%ret_V_7 = mul i24 %zext_ln232_6, i24 %sext_ln1540_3"   --->   Operation 131 'mul' 'ret_V_7' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 132 [1/1] (0.00ns)   --->   "%sext_ln965_2 = sext i25 %sum_19" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:965]   --->   Operation 132 'sext' 'sext_ln965_2' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 133 [2/2] (2.10ns) (root node of the DSP)   --->   "%sum_20 = add i26 %sext_ln965_2, i26 %sext_ln956_1" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:965]   --->   Operation 133 'add' 'sum_20' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 134 [1/3] (0.00ns) (grouped into DSP with root node sum_25)   --->   "%ret_V_12 = mul i24 %zext_ln1540_2, i24 %sext_ln1540_2"   --->   Operation 134 'mul' 'ret_V_12' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 135 [1/1] (0.00ns) (grouped into DSP with root node sum_25)   --->   "%sext_ln956_5 = sext i24 %ret_V_12" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:956]   --->   Operation 135 'sext' 'sext_ln956_5' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 136 [1/1] (0.00ns)   --->   "%zext_ln1540_3 = zext i8 %tmp_9"   --->   Operation 136 'zext' 'zext_ln1540_3' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 137 [3/3] (1.05ns) (grouped into DSP with root node sum_26)   --->   "%ret_V_13 = mul i24 %zext_ln1540_3, i24 %sext_ln1540_3"   --->   Operation 137 'mul' 'ret_V_13' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 138 [1/1] (0.00ns)   --->   "%sext_ln965_6 = sext i25 %sum_24" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:965]   --->   Operation 138 'sext' 'sext_ln965_6' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 139 [2/2] (2.10ns) (root node of the DSP)   --->   "%sum_25 = add i26 %sext_ln965_6, i26 %sext_ln956_5" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:965]   --->   Operation 139 'add' 'sum_25' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 140 [1/3] (0.00ns) (grouped into DSP with root node sum_30)   --->   "%ret_V_18 = mul i24 %zext_ln1540_8, i24 %sext_ln1540_2"   --->   Operation 140 'mul' 'ret_V_18' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 141 [1/1] (0.00ns) (grouped into DSP with root node sum_30)   --->   "%sext_ln956_9 = sext i24 %ret_V_18" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:956]   --->   Operation 141 'sext' 'sext_ln956_9' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 142 [1/1] (0.00ns)   --->   "%zext_ln1540_9 = zext i8 %tmp_5"   --->   Operation 142 'zext' 'zext_ln1540_9' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 143 [3/3] (1.05ns) (grouped into DSP with root node sum_31)   --->   "%ret_V_19 = mul i24 %zext_ln1540_9, i24 %sext_ln1540_3"   --->   Operation 143 'mul' 'ret_V_19' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 144 [1/1] (0.00ns)   --->   "%sext_ln965_10 = sext i25 %sum_29" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:965]   --->   Operation 144 'sext' 'sext_ln965_10' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 145 [2/2] (2.10ns) (root node of the DSP)   --->   "%sum_30 = add i26 %sext_ln965_10, i26 %sext_ln956_9" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:965]   --->   Operation 145 'add' 'sum_30' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 9 <SV = 8> <Delay = 2.32>
+ST_9 : Operation 146 [1/1] (0.00ns)   --->   "%FiltCoeff_4_addr = getelementptr i16 %FiltCoeff_4, i64 0, i64 %idxprom8" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:951]   --->   Operation 146 'getelementptr' 'FiltCoeff_4_addr' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 147 [2/2] (2.32ns)   --->   "%FiltCoeffRead_4 = load i6 %FiltCoeff_4_addr" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:951]   --->   Operation 147 'load' 'FiltCoeffRead_4' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1P_LUTRAM">   --->   Core 87 'RAM_1P_LUTRAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 16> <Depth = 64> <RAM>
+ST_9 : Operation 148 [2/3] (1.05ns) (grouped into DSP with root node sum_21)   --->   "%ret_V_7 = mul i24 %zext_ln232_6, i24 %sext_ln1540_3"   --->   Operation 148 'mul' 'ret_V_7' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 149 [1/2] (2.10ns) (root node of the DSP)   --->   "%sum_20 = add i26 %sext_ln965_2, i26 %sext_ln956_1" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:965]   --->   Operation 149 'add' 'sum_20' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 150 [2/3] (1.05ns) (grouped into DSP with root node sum_26)   --->   "%ret_V_13 = mul i24 %zext_ln1540_3, i24 %sext_ln1540_3"   --->   Operation 150 'mul' 'ret_V_13' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 151 [1/2] (2.10ns) (root node of the DSP)   --->   "%sum_25 = add i26 %sext_ln965_6, i26 %sext_ln956_5" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:965]   --->   Operation 151 'add' 'sum_25' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 152 [2/3] (1.05ns) (grouped into DSP with root node sum_31)   --->   "%ret_V_19 = mul i24 %zext_ln1540_9, i24 %sext_ln1540_3"   --->   Operation 152 'mul' 'ret_V_19' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 153 [1/2] (2.10ns) (root node of the DSP)   --->   "%sum_30 = add i26 %sext_ln965_10, i26 %sext_ln956_9" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:965]   --->   Operation 153 'add' 'sum_30' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 10 <SV = 9> <Delay = 3.37>
+ST_10 : Operation 154 [1/2] (2.32ns)   --->   "%FiltCoeffRead_4 = load i6 %FiltCoeff_4_addr" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:951]   --->   Operation 154 'load' 'FiltCoeffRead_4' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1P_LUTRAM">   --->   Core 87 'RAM_1P_LUTRAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 16> <Depth = 64> <RAM>
+ST_10 : Operation 155 [1/3] (0.00ns) (grouped into DSP with root node sum_21)   --->   "%ret_V_7 = mul i24 %zext_ln232_6, i24 %sext_ln1540_3"   --->   Operation 155 'mul' 'ret_V_7' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 156 [1/1] (0.00ns) (grouped into DSP with root node sum_21)   --->   "%sext_ln956_2 = sext i24 %ret_V_7" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:956]   --->   Operation 156 'sext' 'sext_ln956_2' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 157 [1/1] (0.00ns)   --->   "%zext_ln232_7 = zext i8 %lhs_5"   --->   Operation 157 'zext' 'zext_ln232_7' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 158 [1/1] (0.00ns)   --->   "%sext_ln1540_4 = sext i16 %FiltCoeffRead_4"   --->   Operation 158 'sext' 'sext_ln1540_4' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 159 [3/3] (1.05ns) (grouped into DSP with root node sum_22)   --->   "%ret_V_8 = mul i24 %zext_ln232_7, i24 %sext_ln1540_4"   --->   Operation 159 'mul' 'ret_V_8' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 160 [2/2] (2.10ns) (root node of the DSP)   --->   "%sum_21 = add i26 %sum_20, i26 %sext_ln956_2" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:965]   --->   Operation 160 'add' 'sum_21' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 161 [1/3] (0.00ns) (grouped into DSP with root node sum_26)   --->   "%ret_V_13 = mul i24 %zext_ln1540_3, i24 %sext_ln1540_3"   --->   Operation 161 'mul' 'ret_V_13' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 162 [1/1] (0.00ns) (grouped into DSP with root node sum_26)   --->   "%sext_ln956_6 = sext i24 %ret_V_13" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:956]   --->   Operation 162 'sext' 'sext_ln956_6' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 163 [1/1] (0.00ns)   --->   "%zext_ln1540_4 = zext i8 %tmp_1"   --->   Operation 163 'zext' 'zext_ln1540_4' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 164 [3/3] (1.05ns) (grouped into DSP with root node sum_27)   --->   "%ret_V_14 = mul i24 %zext_ln1540_4, i24 %sext_ln1540_4"   --->   Operation 164 'mul' 'ret_V_14' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 165 [2/2] (2.10ns) (root node of the DSP)   --->   "%sum_26 = add i26 %sum_25, i26 %sext_ln956_6" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:965]   --->   Operation 165 'add' 'sum_26' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 166 [1/3] (0.00ns) (grouped into DSP with root node sum_31)   --->   "%ret_V_19 = mul i24 %zext_ln1540_9, i24 %sext_ln1540_3"   --->   Operation 166 'mul' 'ret_V_19' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 167 [1/1] (0.00ns) (grouped into DSP with root node sum_31)   --->   "%sext_ln956_10 = sext i24 %ret_V_19" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:956]   --->   Operation 167 'sext' 'sext_ln956_10' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 168 [1/1] (0.00ns)   --->   "%zext_ln1540_10 = zext i8 %tmp_10"   --->   Operation 168 'zext' 'zext_ln1540_10' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 169 [3/3] (1.05ns) (grouped into DSP with root node sum_32)   --->   "%ret_V_20 = mul i24 %zext_ln1540_10, i24 %sext_ln1540_4"   --->   Operation 169 'mul' 'ret_V_20' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 170 [2/2] (2.10ns) (root node of the DSP)   --->   "%sum_31 = add i26 %sum_30, i26 %sext_ln956_10" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:965]   --->   Operation 170 'add' 'sum_31' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 11 <SV = 10> <Delay = 2.32>
+ST_11 : Operation 171 [1/1] (0.00ns)   --->   "%FiltCoeff_5_addr = getelementptr i16 %FiltCoeff_5, i64 0, i64 %idxprom8" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:951]   --->   Operation 171 'getelementptr' 'FiltCoeff_5_addr' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 172 [2/2] (2.32ns)   --->   "%FiltCoeffRead_5 = load i6 %FiltCoeff_5_addr" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:951]   --->   Operation 172 'load' 'FiltCoeffRead_5' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1P_LUTRAM">   --->   Core 87 'RAM_1P_LUTRAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 16> <Depth = 64> <RAM>
+ST_11 : Operation 173 [2/3] (1.05ns) (grouped into DSP with root node sum_22)   --->   "%ret_V_8 = mul i24 %zext_ln232_7, i24 %sext_ln1540_4"   --->   Operation 173 'mul' 'ret_V_8' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_11 : Operation 174 [1/2] (2.10ns) (root node of the DSP)   --->   "%sum_21 = add i26 %sum_20, i26 %sext_ln956_2" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:965]   --->   Operation 174 'add' 'sum_21' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_11 : Operation 175 [2/3] (1.05ns) (grouped into DSP with root node sum_27)   --->   "%ret_V_14 = mul i24 %zext_ln1540_4, i24 %sext_ln1540_4"   --->   Operation 175 'mul' 'ret_V_14' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_11 : Operation 176 [1/2] (2.10ns) (root node of the DSP)   --->   "%sum_26 = add i26 %sum_25, i26 %sext_ln956_6" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:965]   --->   Operation 176 'add' 'sum_26' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_11 : Operation 177 [2/3] (1.05ns) (grouped into DSP with root node sum_32)   --->   "%ret_V_20 = mul i24 %zext_ln1540_10, i24 %sext_ln1540_4"   --->   Operation 177 'mul' 'ret_V_20' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_11 : Operation 178 [1/2] (2.10ns) (root node of the DSP)   --->   "%sum_31 = add i26 %sum_30, i26 %sext_ln956_10" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:965]   --->   Operation 178 'add' 'sum_31' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 12 <SV = 11> <Delay = 3.37>
+ST_12 : Operation 179 [1/2] (2.32ns)   --->   "%FiltCoeffRead_5 = load i6 %FiltCoeff_5_addr" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:951]   --->   Operation 179 'load' 'FiltCoeffRead_5' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1P_LUTRAM">   --->   Core 87 'RAM_1P_LUTRAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 16> <Depth = 64> <RAM>
+ST_12 : Operation 180 [1/3] (0.00ns) (grouped into DSP with root node sum_22)   --->   "%ret_V_8 = mul i24 %zext_ln232_7, i24 %sext_ln1540_4"   --->   Operation 180 'mul' 'ret_V_8' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_12 : Operation 181 [1/1] (0.00ns) (grouped into DSP with root node sum_22)   --->   "%sext_ln956_3 = sext i24 %ret_V_8" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:956]   --->   Operation 181 'sext' 'sext_ln956_3' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 182 [1/1] (0.00ns)   --->   "%zext_ln232_8 = zext i8 %lhs_6"   --->   Operation 182 'zext' 'zext_ln232_8' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 183 [1/1] (0.00ns)   --->   "%sext_ln1540_5 = sext i16 %FiltCoeffRead_5"   --->   Operation 183 'sext' 'sext_ln1540_5' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 184 [3/3] (1.05ns) (grouped into DSP with root node sum)   --->   "%ret_V_9 = mul i24 %zext_ln232_8, i24 %sext_ln1540_5"   --->   Operation 184 'mul' 'ret_V_9' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_12 : Operation 185 [1/1] (0.00ns)   --->   "%sext_ln965_3 = sext i26 %sum_21" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:965]   --->   Operation 185 'sext' 'sext_ln965_3' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 186 [2/2] (2.10ns) (root node of the DSP)   --->   "%sum_22 = add i27 %sext_ln965_3, i27 %sext_ln956_3" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:965]   --->   Operation 186 'add' 'sum_22' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_12 : Operation 187 [1/3] (0.00ns) (grouped into DSP with root node sum_27)   --->   "%ret_V_14 = mul i24 %zext_ln1540_4, i24 %sext_ln1540_4"   --->   Operation 187 'mul' 'ret_V_14' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_12 : Operation 188 [1/1] (0.00ns) (grouped into DSP with root node sum_27)   --->   "%sext_ln956_7 = sext i24 %ret_V_14" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:956]   --->   Operation 188 'sext' 'sext_ln956_7' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 189 [1/1] (0.00ns)   --->   "%zext_ln1540_5 = zext i8 %tmp_s"   --->   Operation 189 'zext' 'zext_ln1540_5' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 190 [3/3] (1.05ns) (grouped into DSP with root node sum_11)   --->   "%ret_V_15 = mul i24 %zext_ln1540_5, i24 %sext_ln1540_5"   --->   Operation 190 'mul' 'ret_V_15' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_12 : Operation 191 [1/1] (0.00ns)   --->   "%sext_ln965_7 = sext i26 %sum_26" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:965]   --->   Operation 191 'sext' 'sext_ln965_7' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 192 [2/2] (2.10ns) (root node of the DSP)   --->   "%sum_27 = add i27 %sext_ln965_7, i27 %sext_ln956_7" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:965]   --->   Operation 192 'add' 'sum_27' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_12 : Operation 193 [1/3] (0.00ns) (grouped into DSP with root node sum_32)   --->   "%ret_V_20 = mul i24 %zext_ln1540_10, i24 %sext_ln1540_4"   --->   Operation 193 'mul' 'ret_V_20' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_12 : Operation 194 [1/1] (0.00ns) (grouped into DSP with root node sum_32)   --->   "%sext_ln956_11 = sext i24 %ret_V_20" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:956]   --->   Operation 194 'sext' 'sext_ln956_11' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 195 [1/1] (0.00ns)   --->   "%zext_ln1540_11 = zext i8 %tmp_11"   --->   Operation 195 'zext' 'zext_ln1540_11' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 196 [3/3] (1.05ns) (grouped into DSP with root node sum_17)   --->   "%ret_V_21 = mul i24 %zext_ln1540_11, i24 %sext_ln1540_5"   --->   Operation 196 'mul' 'ret_V_21' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_12 : Operation 197 [1/1] (0.00ns)   --->   "%sext_ln965_11 = sext i26 %sum_31" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:965]   --->   Operation 197 'sext' 'sext_ln965_11' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 198 [2/2] (2.10ns) (root node of the DSP)   --->   "%sum_32 = add i27 %sext_ln965_11, i27 %sext_ln956_11" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:965]   --->   Operation 198 'add' 'sum_32' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 13 <SV = 12> <Delay = 2.10>
+ST_13 : Operation 199 [2/3] (1.05ns) (grouped into DSP with root node sum)   --->   "%ret_V_9 = mul i24 %zext_ln232_8, i24 %sext_ln1540_5"   --->   Operation 199 'mul' 'ret_V_9' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_13 : Operation 200 [1/2] (2.10ns) (root node of the DSP)   --->   "%sum_22 = add i27 %sext_ln965_3, i27 %sext_ln956_3" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:965]   --->   Operation 200 'add' 'sum_22' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_13 : Operation 201 [2/3] (1.05ns) (grouped into DSP with root node sum_11)   --->   "%ret_V_15 = mul i24 %zext_ln1540_5, i24 %sext_ln1540_5"   --->   Operation 201 'mul' 'ret_V_15' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_13 : Operation 202 [1/2] (2.10ns) (root node of the DSP)   --->   "%sum_27 = add i27 %sext_ln965_7, i27 %sext_ln956_7" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:965]   --->   Operation 202 'add' 'sum_27' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_13 : Operation 203 [2/3] (1.05ns) (grouped into DSP with root node sum_17)   --->   "%ret_V_21 = mul i24 %zext_ln1540_11, i24 %sext_ln1540_5"   --->   Operation 203 'mul' 'ret_V_21' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_13 : Operation 204 [1/2] (2.10ns) (root node of the DSP)   --->   "%sum_32 = add i27 %sext_ln965_11, i27 %sext_ln956_11" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:965]   --->   Operation 204 'add' 'sum_32' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 14 <SV = 13> <Delay = 2.10>
+ST_14 : Operation 205 [1/3] (0.00ns) (grouped into DSP with root node sum)   --->   "%ret_V_9 = mul i24 %zext_ln232_8, i24 %sext_ln1540_5"   --->   Operation 205 'mul' 'ret_V_9' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_14 : Operation 206 [1/1] (0.00ns) (grouped into DSP with root node sum)   --->   "%sext_ln965 = sext i24 %ret_V_9" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:965]   --->   Operation 206 'sext' 'sext_ln965' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 207 [2/2] (2.10ns) (root node of the DSP)   --->   "%sum = add i27 %sum_22, i27 %sext_ln965" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:965]   --->   Operation 207 'add' 'sum' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_14 : Operation 208 [1/3] (0.00ns) (grouped into DSP with root node sum_11)   --->   "%ret_V_15 = mul i24 %zext_ln1540_5, i24 %sext_ln1540_5"   --->   Operation 208 'mul' 'ret_V_15' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_14 : Operation 209 [1/1] (0.00ns) (grouped into DSP with root node sum_11)   --->   "%sext_ln965_4 = sext i24 %ret_V_15" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:965]   --->   Operation 209 'sext' 'sext_ln965_4' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 210 [2/2] (2.10ns) (root node of the DSP)   --->   "%sum_11 = add i27 %sum_27, i27 %sext_ln965_4" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:965]   --->   Operation 210 'add' 'sum_11' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_14 : Operation 211 [1/3] (0.00ns) (grouped into DSP with root node sum_17)   --->   "%ret_V_21 = mul i24 %zext_ln1540_11, i24 %sext_ln1540_5"   --->   Operation 211 'mul' 'ret_V_21' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_14 : Operation 212 [1/1] (0.00ns) (grouped into DSP with root node sum_17)   --->   "%sext_ln965_8 = sext i24 %ret_V_21" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:965]   --->   Operation 212 'sext' 'sext_ln965_8' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 213 [2/2] (2.10ns) (root node of the DSP)   --->   "%sum_17 = add i27 %sum_32, i27 %sext_ln965_8" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:965]   --->   Operation 213 'add' 'sum_17' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 15 <SV = 14> <Delay = 3.58>
+ST_15 : Operation 214 [1/2] (2.10ns) (root node of the DSP)   --->   "%sum = add i27 %sum_22, i27 %sext_ln965" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:965]   --->   Operation 214 'add' 'sum' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_15 : Operation 215 [1/1] (0.00ns)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i27.i32, i27 %sum, i32 26" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:968]   --->   Operation 215 'bitselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 216 [1/1] (0.00ns)   --->   "%tmp_12 = partselect i7 @_ssdm_op_PartSelect.i7.i27.i32.i32, i27 %sum, i32 20, i32 26" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:968]   --->   Operation 216 'partselect' 'tmp_12' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 217 [1/1] (1.48ns)   --->   "%icmp_ln968 = icmp_sgt  i7 %tmp_12, i7 0" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:968]   --->   Operation 217 'icmp' 'icmp_ln968' <Predicate = true> <Delay = 1.48> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 218 [1/2] (2.10ns) (root node of the DSP)   --->   "%sum_11 = add i27 %sum_27, i27 %sext_ln965_4" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:965]   --->   Operation 218 'add' 'sum_11' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_15 : Operation 219 [1/1] (0.00ns)   --->   "%tmp_13 = bitselect i1 @_ssdm_op_BitSelect.i1.i27.i32, i27 %sum_11, i32 26" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:968]   --->   Operation 219 'bitselect' 'tmp_13' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 220 [1/1] (0.00ns)   --->   "%tmp_14 = partselect i7 @_ssdm_op_PartSelect.i7.i27.i32.i32, i27 %sum_11, i32 20, i32 26" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:968]   --->   Operation 220 'partselect' 'tmp_14' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 221 [1/1] (1.48ns)   --->   "%icmp_ln968_1 = icmp_sgt  i7 %tmp_14, i7 0" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:968]   --->   Operation 221 'icmp' 'icmp_ln968_1' <Predicate = true> <Delay = 1.48> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 222 [1/2] (2.10ns) (root node of the DSP)   --->   "%sum_17 = add i27 %sum_32, i27 %sext_ln965_8" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:965]   --->   Operation 222 'add' 'sum_17' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_15 : Operation 223 [1/1] (0.00ns)   --->   "%tmp_15 = bitselect i1 @_ssdm_op_BitSelect.i1.i27.i32, i27 %sum_17, i32 26" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:968]   --->   Operation 223 'bitselect' 'tmp_15' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 224 [1/1] (0.00ns)   --->   "%tmp_16 = partselect i7 @_ssdm_op_PartSelect.i7.i27.i32.i32, i27 %sum_17, i32 20, i32 26" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:968]   --->   Operation 224 'partselect' 'tmp_16' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 225 [1/1] (1.48ns)   --->   "%icmp_ln968_2 = icmp_sgt  i7 %tmp_16, i7 0" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:968]   --->   Operation 225 'icmp' 'icmp_ln968_2' <Predicate = true> <Delay = 1.48> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+
+State 16 <SV = 15> <Delay = 1.24>
+ST_16 : Operation 226 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %FiltCoeff_0, i64 666, i64 19, i64 18446744073709551615"   --->   Operation 226 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 227 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %FiltCoeff_1, i64 666, i64 19, i64 18446744073709551615"   --->   Operation 227 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 228 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %FiltCoeff_2, i64 666, i64 19, i64 18446744073709551615"   --->   Operation 228 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 229 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %FiltCoeff_3, i64 666, i64 19, i64 18446744073709551615"   --->   Operation 229 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 230 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %FiltCoeff_4, i64 666, i64 19, i64 18446744073709551615"   --->   Operation 230 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 231 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %FiltCoeff_5, i64 666, i64 19, i64 18446744073709551615"   --->   Operation 231 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 232 [1/1] (0.00ns) (grouped into LUT with out node select_ln260)   --->   "%trunc_ln4 = partselect i8 @_ssdm_op_PartSelect.i8.i27.i32.i32, i27 %sum, i32 12, i32 19"   --->   Operation 232 'partselect' 'trunc_ln4' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 233 [1/1] (0.00ns) (grouped into LUT with out node select_ln260)   --->   "%xor_ln260 = xor i1 %tmp, i1 1"   --->   Operation 233 'xor' 'xor_ln260' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 234 [1/1] (0.00ns) (grouped into LUT with out node select_ln260)   --->   "%select_ln260_3 = select i1 %xor_ln260, i8 255, i8 0"   --->   Operation 234 'select' 'select_ln260_3' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_16 : Operation 235 [1/1] (0.00ns) (grouped into LUT with out node select_ln260)   --->   "%or_ln260 = or i1 %tmp, i1 %icmp_ln968"   --->   Operation 235 'or' 'or_ln260' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 236 [1/1] (1.24ns) (out node of the LUT)   --->   "%select_ln260 = select i1 %or_ln260, i8 %select_ln260_3, i8 %trunc_ln4"   --->   Operation 236 'select' 'select_ln260' <Predicate = true> <Delay = 1.24> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_16 : Operation 237 [1/1] (0.00ns) (grouped into LUT with out node select_ln260_1)   --->   "%trunc_ln260_1 = partselect i8 @_ssdm_op_PartSelect.i8.i27.i32.i32, i27 %sum_11, i32 12, i32 19"   --->   Operation 237 'partselect' 'trunc_ln260_1' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 238 [1/1] (0.00ns) (grouped into LUT with out node select_ln260_1)   --->   "%xor_ln260_1 = xor i1 %tmp_13, i1 1"   --->   Operation 238 'xor' 'xor_ln260_1' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 239 [1/1] (0.00ns) (grouped into LUT with out node select_ln260_1)   --->   "%select_ln260_4 = select i1 %xor_ln260_1, i8 255, i8 0"   --->   Operation 239 'select' 'select_ln260_4' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_16 : Operation 240 [1/1] (0.00ns) (grouped into LUT with out node select_ln260_1)   --->   "%or_ln260_1 = or i1 %tmp_13, i1 %icmp_ln968_1"   --->   Operation 240 'or' 'or_ln260_1' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 241 [1/1] (1.24ns) (out node of the LUT)   --->   "%select_ln260_1 = select i1 %or_ln260_1, i8 %select_ln260_4, i8 %trunc_ln260_1"   --->   Operation 241 'select' 'select_ln260_1' <Predicate = true> <Delay = 1.24> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_16 : Operation 242 [1/1] (0.00ns) (grouped into LUT with out node select_ln260_2)   --->   "%trunc_ln260_2 = partselect i8 @_ssdm_op_PartSelect.i8.i27.i32.i32, i27 %sum_17, i32 12, i32 19"   --->   Operation 242 'partselect' 'trunc_ln260_2' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 243 [1/1] (0.00ns) (grouped into LUT with out node select_ln260_2)   --->   "%xor_ln260_2 = xor i1 %tmp_15, i1 1"   --->   Operation 243 'xor' 'xor_ln260_2' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 244 [1/1] (0.00ns) (grouped into LUT with out node select_ln260_2)   --->   "%select_ln260_5 = select i1 %xor_ln260_2, i8 255, i8 0"   --->   Operation 244 'select' 'select_ln260_5' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_16 : Operation 245 [1/1] (0.00ns) (grouped into LUT with out node select_ln260_2)   --->   "%or_ln260_2 = or i1 %tmp_15, i1 %icmp_ln968_2"   --->   Operation 245 'or' 'or_ln260_2' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 246 [1/1] (1.24ns) (out node of the LUT)   --->   "%select_ln260_2 = select i1 %or_ln260_2, i8 %select_ln260_5, i8 %trunc_ln260_2"   --->   Operation 246 'select' 'select_ln260_2' <Predicate = true> <Delay = 1.24> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_16 : Operation 247 [1/1] (0.00ns)   --->   "%mrv = insertvalue i24 <undef>, i8 %select_ln260" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:973]   --->   Operation 247 'insertvalue' 'mrv' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 248 [1/1] (0.00ns)   --->   "%mrv_1 = insertvalue i24 %mrv, i8 %select_ln260_1" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:973]   --->   Operation 248 'insertvalue' 'mrv_1' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 249 [1/1] (0.00ns)   --->   "%mrv_2 = insertvalue i24 %mrv_1, i8 %select_ln260_2" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:973]   --->   Operation 249 'insertvalue' 'mrv_2' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 250 [1/1] (0.00ns)   --->   "%ret_ln973 = ret i24 %mrv_2" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:973]   --->   Operation 250 'ret' 'ret_ln973' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5.62ns, clock uncertainty: 1.52ns.
+
+ <State 1>: 3.51ns
+The critical path consists of the following:
+	wire read operation ('p_read') on port 'p_read2425' [30]  (0 ns)
+	'add' operation ('idx', /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:946) [60]  (1.56 ns)
+	'mux' operation ('lhs') [74]  (1.95 ns)
+
+ <State 2>: 3.37ns
+The critical path consists of the following:
+	'load' operation ('FiltCoeffRead', /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:951) on array 'FiltCoeff_0' [63]  (2.32 ns)
+	'mul' operation of DSP[103] ('ret.V') [77]  (1.05 ns)
+
+ <State 3>: 2.32ns
+The critical path consists of the following:
+	'getelementptr' operation ('FiltCoeff_1_addr', /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:951) [64]  (0 ns)
+	'load' operation ('FiltCoeffRead', /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:951) on array 'FiltCoeff_1' [65]  (2.32 ns)
+
+ <State 4>: 3.37ns
+The critical path consists of the following:
+	'load' operation ('FiltCoeffRead', /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:951) on array 'FiltCoeff_1' [65]  (2.32 ns)
+	'mul' operation of DSP[105] ('ret.V') [81]  (1.05 ns)
+
+ <State 5>: 2.32ns
+The critical path consists of the following:
+	'getelementptr' operation ('FiltCoeff_2_addr', /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:951) [66]  (0 ns)
+	'load' operation ('FiltCoeffRead', /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:951) on array 'FiltCoeff_2' [67]  (2.32 ns)
+
+ <State 6>: 3.37ns
+The critical path consists of the following:
+	'load' operation ('FiltCoeffRead', /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:951) on array 'FiltCoeff_2' [67]  (2.32 ns)
+	'mul' operation of DSP[107] ('ret.V') [86]  (1.05 ns)
+
+ <State 7>: 2.32ns
+The critical path consists of the following:
+	'getelementptr' operation ('FiltCoeff_3_addr', /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:951) [68]  (0 ns)
+	'load' operation ('FiltCoeffRead', /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:951) on array 'FiltCoeff_3' [69]  (2.32 ns)
+
+ <State 8>: 3.37ns
+The critical path consists of the following:
+	'load' operation ('FiltCoeffRead', /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:951) on array 'FiltCoeff_3' [69]  (2.32 ns)
+	'mul' operation of DSP[108] ('ret.V') [91]  (1.05 ns)
+
+ <State 9>: 2.32ns
+The critical path consists of the following:
+	'getelementptr' operation ('FiltCoeff_4_addr', /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:951) [70]  (0 ns)
+	'load' operation ('FiltCoeffRead', /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:951) on array 'FiltCoeff_4' [71]  (2.32 ns)
+
+ <State 10>: 3.37ns
+The critical path consists of the following:
+	'load' operation ('FiltCoeffRead', /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:951) on array 'FiltCoeff_4' [71]  (2.32 ns)
+	'mul' operation of DSP[110] ('ret.V') [96]  (1.05 ns)
+
+ <State 11>: 2.32ns
+The critical path consists of the following:
+	'getelementptr' operation ('FiltCoeff_5_addr', /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:951) [72]  (0 ns)
+	'load' operation ('FiltCoeffRead', /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:951) on array 'FiltCoeff_5' [73]  (2.32 ns)
+
+ <State 12>: 3.37ns
+The critical path consists of the following:
+	'load' operation ('FiltCoeffRead', /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:951) on array 'FiltCoeff_5' [73]  (2.32 ns)
+	'mul' operation of DSP[111] ('ret.V') [101]  (1.05 ns)
+
+ <State 13>: 2.1ns
+The critical path consists of the following:
+	'add' operation of DSP[110] ('sum_22', /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:965) [110]  (2.1 ns)
+
+ <State 14>: 2.1ns
+The critical path consists of the following:
+	'mul' operation of DSP[111] ('ret.V') [101]  (0 ns)
+	'add' operation of DSP[111] ('sum', /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:965) [111]  (2.1 ns)
+
+ <State 15>: 3.59ns
+The critical path consists of the following:
+	'add' operation of DSP[111] ('sum', /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:965) [111]  (2.1 ns)
+	'icmp' operation ('icmp_ln968', /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_hsc_0_synth_1/prj/sol/.autopilot/db/v_hscaler.cpp:968) [114]  (1.49 ns)
+
+ <State 16>: 1.25ns
+The critical path consists of the following:
+	'select' operation ('select_ln260') [119]  (1.25 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

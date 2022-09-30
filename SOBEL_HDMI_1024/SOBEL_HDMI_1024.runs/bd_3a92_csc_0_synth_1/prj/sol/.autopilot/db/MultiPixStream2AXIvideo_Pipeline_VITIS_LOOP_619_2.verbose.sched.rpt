@@ -1,0 +1,188 @@
+
+
+================================================================
+== Vitis HLS Report for 'MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_619_2'
+================================================================
+* Date:           Mon Aug 29 12:25:36 2022
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        prj
+* Solution:       sol (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.62 ns|  3.468 ns|     1.52 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+-----------+-----+------+---------+
+    |  Latency (cycles) |  Latency (absolute)  |  Interval  | Pipeline|
+    |   min   |   max   |    min   |    max    | min |  max |   Type  |
+    +---------+---------+----------+-----------+-----+------+---------+
+    |       68|     1924|  0.383 us|  10.822 us|   68|  1924|       no|
+    +---------+---------+----------+-----------+-----+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+-----------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  |    Trip   |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  |   Count   | Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+-----------+----------+
+        |- VITIS_LOOP_619_2  |       66|     1922|         3|          1|          1|  64 ~ 1920|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+-----------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 3
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 3, States = { 1 2 3 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.46>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%j = alloca i32 1"   --->   Operation 6 'alloca' 'j' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %m_axis_video_V_data_V, i3 %m_axis_video_V_keep_V, i3 %m_axis_video_V_strb_V, i1 %m_axis_video_V_user_V, i1 %m_axis_video_V_last_V, i1 %m_axis_video_V_id_V, i1 %m_axis_video_V_dest_V, void @empty, i32 0, i32 0, void @empty_45, i32 0, i32 0, void @empty_22, void @empty_22, void @empty_22, i32 0, i32 0, i32 0, i32 0, void @empty_22, void @empty_22, i32 4294967295, i32 0"   --->   Operation 7 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %stream_out_hresampled, void @empty_35, i32 0, i32 0, void @empty_22, i32 0, i32 0, void @empty_22, void @empty_22, void @empty_22, i32 0, i32 0, i32 0, i32 0, void @empty_22, void @empty_22, i32 4294967295, i32 0"   --->   Operation 8 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%sub_read = read i11 @_ssdm_op_Read.ap_auto.i11, i11 %sub"   --->   Operation 9 'read' 'sub_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%p_read_55 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_read"   --->   Operation 10 'read' 'p_read_55' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%cols_read = read i11 @_ssdm_op_Read.ap_auto.i11, i11 %cols"   --->   Operation 11 'read' 'cols_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%sof_read = read i1 @_ssdm_op_Read.ap_auto.i1, i1 %sof"   --->   Operation 12 'read' 'sof_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (1.58ns)   --->   "%store_ln0 = store i11 0, i11 %j"   --->   Operation 13 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 14 [1/1] (1.58ns)   --->   "%br_ln0 = br void %for.body21"   --->   Operation 14 'br' 'br_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%j_1 = load i11 %j" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:619]   --->   Operation 15 'load' 'j_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (1.88ns)   --->   "%icmp_ln619 = icmp_eq  i11 %j_1, i11 %cols_read" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:619]   --->   Operation 16 'icmp' 'icmp_ln619' <Predicate = true> <Delay = 1.88> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 17 [1/1] (1.63ns)   --->   "%j_2 = add i11 %j_1, i11 1" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:619]   --->   Operation 17 'add' 'j_2' <Predicate = true> <Delay = 1.63> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.63> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%br_ln619 = br i1 %icmp_ln619, void %for.body21.split, void %for.inc86.exitStub" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:619]   --->   Operation 18 'br' 'br_ln619' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (1.88ns)   --->   "%tmp_last_V = icmp_eq  i11 %j_1, i11 %sub_read" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:632]   --->   Operation 19 'icmp' 'tmp_last_V' <Predicate = (!icmp_ln619)> <Delay = 1.88> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 20 [1/1] (0.95ns)   --->   "%switch_ln652 = switch i8 %p_read_55, void %sw.default, i8 0, void %sw.bb, i8 1, void %sw.bb68" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:652]   --->   Operation 20 'switch' 'switch_ln652' <Predicate = (!icmp_ln619)> <Delay = 0.95>
+ST_1 : Operation 21 [1/1] (0.95ns)   --->   "%switch_ln652 = switch i8 %p_read_55, void %sw.default.1, i8 0, void %sw.bb.1, i8 1, void %sw.bb68.1" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:652]   --->   Operation 21 'switch' 'switch_ln652' <Predicate = (!icmp_ln619)> <Delay = 0.95>
+ST_1 : Operation 22 [1/1] (0.95ns)   --->   "%switch_ln652 = switch i8 %p_read_55, void %sw.default.2, i8 0, void %sw.bb.2, i8 1, void %sw.bb68.2" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:652]   --->   Operation 22 'switch' 'switch_ln652' <Predicate = (!icmp_ln619)> <Delay = 0.95>
+ST_1 : Operation 23 [1/1] (1.58ns)   --->   "%store_ln619 = store i11 %j_2, i11 %j" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:619]   --->   Operation 23 'store' 'store_ln619' <Predicate = (!icmp_ln619)> <Delay = 1.58>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%br_ln619 = br void %for.body21" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:619]   --->   Operation 24 'br' 'br_ln619' <Predicate = (!icmp_ln619)> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 2.05>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%specpipeline_ln622 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_22" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:622]   --->   Operation 25 'specpipeline' 'specpipeline_ln622' <Predicate = (!icmp_ln619)> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%specloopname_ln616 = specloopname void @_ssdm_op_SpecLoopName, void @empty_44" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:616]   --->   Operation 26 'specloopname' 'specloopname_ln616' <Predicate = (!icmp_ln619)> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (2.05ns)   --->   "%stream_out_hresampled_read = read i24 @_ssdm_op_Read.ap_fifo.volatile.i24P0A, i24 %stream_out_hresampled" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 27 'read' 'stream_out_hresampled_read' <Predicate = (!icmp_ln619)> <Delay = 2.05> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.80> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 24> <Depth = 16> <FIFO>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%pix_rgb_V = trunc i24 %stream_out_hresampled_read" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 28 'trunc' 'pix_rgb_V' <Predicate = (!icmp_ln619)> <Delay = 0.00>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%pix_444_V_1 = partselect i8 @_ssdm_op_PartSelect.i8.i24.i32.i32, i24 %stream_out_hresampled_read, i32 8, i32 15" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 29 'partselect' 'pix_444_V_1' <Predicate = (!icmp_ln619)> <Delay = 0.00>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%pix_444_V = partselect i8 @_ssdm_op_PartSelect.i8.i24.i32.i32, i24 %stream_out_hresampled_read, i32 16, i32 23" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 30 'partselect' 'pix_444_V' <Predicate = (!icmp_ln619)> <Delay = 0.00>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%p_Result_4 = bitconcatenate i9 @_ssdm_op_BitConcatenate.i9.i1.i8, i1 1, i8 %pix_rgb_V"   --->   Operation 31 'bitconcatenate' 'p_Result_4' <Predicate = (!icmp_ln619 & p_read_55 == 1)> <Delay = 0.00>
+ST_2 : Operation 32 [1/1] (1.70ns)   --->   "%br_ln659 = br void %for.inc" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:659]   --->   Operation 32 'br' 'br_ln659' <Predicate = (!icmp_ln619 & p_read_55 == 1)> <Delay = 1.70>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "%p_Result_3 = bitconcatenate i9 @_ssdm_op_BitConcatenate.i9.i1.i8, i1 1, i8 %pix_444_V_1"   --->   Operation 33 'bitconcatenate' 'p_Result_3' <Predicate = (!icmp_ln619 & p_read_55 == 0)> <Delay = 0.00>
+ST_2 : Operation 34 [1/1] (1.70ns)   --->   "%br_ln656 = br void %for.inc" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:656]   --->   Operation 34 'br' 'br_ln656' <Predicate = (!icmp_ln619 & p_read_55 == 0)> <Delay = 1.70>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%p_Result_5 = bitconcatenate i9 @_ssdm_op_BitConcatenate.i9.i1.i8, i1 1, i8 %pix_rgb_V"   --->   Operation 35 'bitconcatenate' 'p_Result_5' <Predicate = (!icmp_ln619 & p_read_55 != 0 & p_read_55 != 1)> <Delay = 0.00>
+ST_2 : Operation 36 [1/1] (1.70ns)   --->   "%br_ln662 = br void %for.inc" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:662]   --->   Operation 36 'br' 'br_ln662' <Predicate = (!icmp_ln619 & p_read_55 != 0 & p_read_55 != 1)> <Delay = 1.70>
+
+State 3 <SV = 2> <Delay = 3.41>
+ST_3 : Operation 37 [1/1] (0.00ns)   --->   "%tmp_user_V = phi i1 0, void %for.inc.2, i1 %sof_read, void %newFuncRoot"   --->   Operation 37 'phi' 'tmp_user_V' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 38 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 64, i64 1920, i64 0"   --->   Operation 38 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 39 [1/1] (0.00ns)   --->   "%p_Val2_s = phi i9 %p_Result_5, void %sw.default, i9 %p_Result_4, void %sw.bb68, i9 %p_Result_3, void %sw.bb"   --->   Operation 39 'phi' 'p_Val2_s' <Predicate = (!icmp_ln619)> <Delay = 0.00>
+ST_3 : Operation 40 [1/1] (0.00ns)   --->   "%sext_ln573 = sext i9 %p_Val2_s" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:573]   --->   Operation 40 'sext' 'sext_ln573' <Predicate = (!icmp_ln619)> <Delay = 0.00>
+ST_3 : Operation 41 [1/1] (0.00ns)   --->   "%p_Result_2 = partset i24 @_ssdm_op_PartSet.i24.i24.i8.i32.i32, i24 %sext_ln573, i8 %pix_444_V_1, i32 8, i32 15"   --->   Operation 41 'partset' 'p_Result_2' <Predicate = (!icmp_ln619 & p_read_55 == 1)> <Delay = 0.00>
+ST_3 : Operation 42 [1/1] (1.70ns)   --->   "%br_ln659 = br void %for.inc.1" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:659]   --->   Operation 42 'br' 'br_ln659' <Predicate = (!icmp_ln619 & p_read_55 == 1)> <Delay = 1.70>
+ST_3 : Operation 43 [1/1] (0.00ns)   --->   "%p_Result_6 = partset i24 @_ssdm_op_PartSet.i24.i24.i8.i32.i32, i24 %sext_ln573, i8 %pix_444_V, i32 8, i32 15"   --->   Operation 43 'partset' 'p_Result_6' <Predicate = (!icmp_ln619 & p_read_55 == 0)> <Delay = 0.00>
+ST_3 : Operation 44 [1/1] (1.70ns)   --->   "%br_ln656 = br void %for.inc.1" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:656]   --->   Operation 44 'br' 'br_ln656' <Predicate = (!icmp_ln619 & p_read_55 == 0)> <Delay = 1.70>
+ST_3 : Operation 45 [1/1] (0.00ns)   --->   "%p_Result_7 = partset i24 @_ssdm_op_PartSet.i24.i24.i8.i32.i32, i24 %sext_ln573, i8 %pix_444_V_1, i32 8, i32 15"   --->   Operation 45 'partset' 'p_Result_7' <Predicate = (!icmp_ln619 & p_read_55 != 0 & p_read_55 != 1)> <Delay = 0.00>
+ST_3 : Operation 46 [1/1] (1.70ns)   --->   "%br_ln662 = br void %for.inc.1" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:662]   --->   Operation 46 'br' 'br_ln662' <Predicate = (!icmp_ln619 & p_read_55 != 0 & p_read_55 != 1)> <Delay = 1.70>
+ST_3 : Operation 47 [1/1] (0.00ns)   --->   "%p_Val2_1 = phi i24 %p_Result_7, void %sw.default.1, i24 %p_Result_2, void %sw.bb68.1, i24 %p_Result_6, void %sw.bb.1"   --->   Operation 47 'phi' 'p_Val2_1' <Predicate = (!icmp_ln619)> <Delay = 0.00>
+ST_3 : Operation 48 [1/1] (0.00ns)   --->   "%p_Result_s = partset i24 @_ssdm_op_PartSet.i24.i24.i8.i32.i32, i24 %p_Val2_1, i8 %pix_444_V, i32 16, i32 23"   --->   Operation 48 'partset' 'p_Result_s' <Predicate = (!icmp_ln619 & p_read_55 == 1)> <Delay = 0.00>
+ST_3 : Operation 49 [1/1] (1.70ns)   --->   "%br_ln659 = br void %for.inc.2" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:659]   --->   Operation 49 'br' 'br_ln659' <Predicate = (!icmp_ln619 & p_read_55 == 1)> <Delay = 1.70>
+ST_3 : Operation 50 [1/1] (0.00ns)   --->   "%p_Result_8 = partset i24 @_ssdm_op_PartSet.i24.i24.i8.i32.i32, i24 %p_Val2_1, i8 %pix_rgb_V, i32 16, i32 23"   --->   Operation 50 'partset' 'p_Result_8' <Predicate = (!icmp_ln619 & p_read_55 == 0)> <Delay = 0.00>
+ST_3 : Operation 51 [1/1] (1.70ns)   --->   "%br_ln656 = br void %for.inc.2" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:656]   --->   Operation 51 'br' 'br_ln656' <Predicate = (!icmp_ln619 & p_read_55 == 0)> <Delay = 1.70>
+ST_3 : Operation 52 [1/1] (0.00ns)   --->   "%p_Result_9 = partset i24 @_ssdm_op_PartSet.i24.i24.i8.i32.i32, i24 %p_Val2_1, i8 %pix_444_V, i32 16, i32 23"   --->   Operation 52 'partset' 'p_Result_9' <Predicate = (!icmp_ln619 & p_read_55 != 0 & p_read_55 != 1)> <Delay = 0.00>
+ST_3 : Operation 53 [1/1] (1.70ns)   --->   "%br_ln662 = br void %for.inc.2" [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:662]   --->   Operation 53 'br' 'br_ln662' <Predicate = (!icmp_ln619 & p_read_55 != 0 & p_read_55 != 1)> <Delay = 1.70>
+ST_3 : Operation 54 [1/1] (0.00ns)   --->   "%axi_data_V_12 = phi i24 %p_Result_9, void %sw.default.2, i24 %p_Result_s, void %sw.bb68.2, i24 %p_Result_8, void %sw.bb.2"   --->   Operation 54 'phi' 'axi_data_V_12' <Predicate = (!icmp_ln619)> <Delay = 0.00>
+ST_3 : Operation 55 [1/1] (0.00ns)   --->   "%write_ln304 = write void @_ssdm_op_Write.axis.volatile.i24P0A.i3P0A.i3P0A.i1P0A.i1P0A.i1P0A.i1P0A, i24 %m_axis_video_V_data_V, i3 %m_axis_video_V_keep_V, i3 %m_axis_video_V_strb_V, i1 %m_axis_video_V_user_V, i1 %m_axis_video_V_last_V, i1 %m_axis_video_V_id_V, i1 %m_axis_video_V_dest_V, i24 %axi_data_V_12, i3 7, i3 0, i1 %tmp_user_V, i1 %tmp_last_V, i1 0, i1 0"   --->   Operation 55 'write' 'write_ln304' <Predicate = (!icmp_ln619)> <Delay = 0.00> <CoreInst = "axis">   --->   Core 115 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_3 : Operation 56 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 56 'ret' 'ret_ln0' <Predicate = (icmp_ln619)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5.62ns, clock uncertainty: 1.52ns.
+
+ <State 1>: 3.47ns
+The critical path consists of the following:
+	'alloca' operation ('j') [13]  (0 ns)
+	'load' operation ('j', /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:619) on local variable 'j' [24]  (0 ns)
+	'add' operation ('j', /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:619) [27]  (1.64 ns)
+	'store' operation ('store_ln619', /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:619) of variable 'j', /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:619 on local variable 'j' [75]  (1.59 ns)
+	blocking operation 0.241 ns on control path)
+
+ <State 2>: 2.05ns
+The critical path consists of the following:
+	fifo read operation ('stream_out_hresampled_read', /tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145) on port 'stream_out_hresampled' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145) [33]  (2.05 ns)
+
+ <State 3>: 3.41ns
+The critical path consists of the following:
+	'phi' operation ('__Result__') with incoming values : ('__Result__') [48]  (0 ns)
+	multiplexor before 'phi' operation ('__Result__') with incoming values : ('__Result__') [61]  (1.71 ns)
+	'phi' operation ('__Result__') with incoming values : ('__Result__') [61]  (0 ns)
+	multiplexor before 'phi' operation ('__Result__') with incoming values : ('__Result__') [73]  (1.71 ns)
+	'phi' operation ('__Result__') with incoming values : ('__Result__') [73]  (0 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

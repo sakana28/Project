@@ -1,0 +1,390 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source /tools/Xilinx/Vitis_HLS/2022.1/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2022.1/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'benchmarker' on host 'benchmarker-HP-ZBook-Fury-15-G7-Mobile-Workstation' (Linux_x86_64 version 5.15.0-46-generic) on Mon Aug 29 12:24:19 CEST 2022
+INFO: [HLS 200-10] On os Ubuntu 20.04.2 LTS
+INFO: [HLS 200-10] In directory '/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_ltr_0_synth_1'
+Sourcing Tcl script '/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_ltr_0_synth_1/runhls.tcl'
+INFO: [HLS 200-1510] Running: open_project -reset prj 
+INFO: [HLS 200-10] Creating and opening project '/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_ltr_0_synth_1/prj'.
+INFO: [HLS 200-1510] Running: set_top v_letterbox 
+INFO: [HLS 200-1510] Running: open_solution sol 
+INFO: [HLS 200-10] Creating and opening solution '/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_ltr_0_synth_1/prj/sol'.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vivado' configuration: config_interface -m_axi_latency=0
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1510] Running: add_files -cflags  -I /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/hls -I /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src  /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/v_letterbox_config.h 
+INFO: [HLS 200-10] Adding design file '/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/v_letterbox_config.h' to the project
+INFO: [HLS 200-1510] Running: add_files -cflags  -I /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/hls -I /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src  /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/v_letterbox.cpp 
+INFO: [HLS 200-10] Adding design file '/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/v_letterbox.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -cflags  -I /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/hls -I /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src  /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/v_letterbox.h 
+INFO: [HLS 200-10] Adding design file '/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/v_letterbox.h' to the project
+INFO: [HLS 200-1510] Running: add_files -cflags  -I /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/hls -I /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src  /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/hls_video.h 
+INFO: [HLS 200-10] Adding design file '/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/hls_video.h' to the project
+INFO: [HLS 200-1510] Running: add_files -cflags  -I /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/hls -I /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src  /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/hls_opencv.h 
+INFO: [HLS 200-10] Adding design file '/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/hls_opencv.h' to the project
+INFO: [HLS 200-1510] Running: add_files -cflags  -I /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/hls -I /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src  /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/hls/hls_axi_io.h 
+INFO: [HLS 200-10] Adding design file '/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/hls/hls_axi_io.h' to the project
+INFO: [HLS 200-1510] Running: add_files -cflags  -I /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/hls -I /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src  /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/hls/hls_video_arithm.h 
+INFO: [HLS 200-10] Adding design file '/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/hls/hls_video_arithm.h' to the project
+INFO: [HLS 200-1510] Running: add_files -cflags  -I /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/hls -I /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src  /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/hls/hls_video_core.h 
+INFO: [HLS 200-10] Adding design file '/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/hls/hls_video_core.h' to the project
+INFO: [HLS 200-1510] Running: add_files -cflags  -I /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/hls -I /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src  /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/hls/hls_video_fast.h 
+INFO: [HLS 200-10] Adding design file '/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/hls/hls_video_fast.h' to the project
+INFO: [HLS 200-1510] Running: add_files -cflags  -I /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/hls -I /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src  /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/hls/hls_video_haar.h 
+INFO: [HLS 200-10] Adding design file '/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/hls/hls_video_haar.h' to the project
+INFO: [HLS 200-1510] Running: add_files -cflags  -I /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/hls -I /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src  /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/hls/hls_video_harris.h 
+INFO: [HLS 200-10] Adding design file '/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/hls/hls_video_harris.h' to the project
+INFO: [HLS 200-1510] Running: add_files -cflags  -I /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/hls -I /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src  /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/hls/hls_video_histogram.h 
+INFO: [HLS 200-10] Adding design file '/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/hls/hls_video_histogram.h' to the project
+INFO: [HLS 200-1510] Running: add_files -cflags  -I /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/hls -I /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src  /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/hls/hls_video_hough.h 
+INFO: [HLS 200-10] Adding design file '/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/hls/hls_video_hough.h' to the project
+INFO: [HLS 200-1510] Running: add_files -cflags  -I /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/hls -I /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src  /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/hls/hls_video_imgbase.h 
+INFO: [HLS 200-10] Adding design file '/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/hls/hls_video_imgbase.h' to the project
+INFO: [HLS 200-1510] Running: add_files -cflags  -I /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/hls -I /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src  /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/hls/hls_video_imgproc.h 
+INFO: [HLS 200-10] Adding design file '/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/hls/hls_video_imgproc.h' to the project
+INFO: [HLS 200-1510] Running: add_files -cflags  -I /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/hls -I /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src  /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/hls/hls_video_io.h 
+INFO: [HLS 200-10] Adding design file '/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/hls/hls_video_io.h' to the project
+INFO: [HLS 200-1510] Running: add_files -cflags  -I /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/hls -I /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src  /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/hls/hls_video_mem.h 
+INFO: [HLS 200-10] Adding design file '/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/hls/hls_video_mem.h' to the project
+INFO: [HLS 200-1510] Running: add_files -cflags  -I /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/hls -I /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src  /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/hls/hls_video_stereobm.h 
+INFO: [HLS 200-10] Adding design file '/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/hls/hls_video_stereobm.h' to the project
+INFO: [HLS 200-1510] Running: add_files -cflags  -I /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/hls -I /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src  /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/hls/hls_video_types.h 
+INFO: [HLS 200-10] Adding design file '/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/hls/hls_video_types.h' to the project
+INFO: [HLS 200-1510] Running: add_files -cflags  -I /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/hls -I /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src  /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/hls/hls_video_undistort.h 
+INFO: [HLS 200-10] Adding design file '/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/hls/hls_video_undistort.h' to the project
+INFO: [HLS 200-1510] Running: create_clock -period 5.625 -name ap_clk 
+INFO: [SYN 201-201] Setting up clock 'ap_clk' with a period of 5.625ns.
+INFO: [HLS 200-1510] Running: config_rtl -module_prefix bd_3a92_ltr_0_ 
+INFO: [HLS 200-1510] Running: config_export -vendor xilinx.com -library ip -version 1.1 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 749.602 MB.
+INFO: [HLS 200-10] Analyzing design file '/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/v_letterbox.cpp' ... 
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_ltr_0_synth_1/prj/sol/.autopilot/db/v_letterbox.cpp:102:9)
+Resolution: For help on HLS 214-114 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=214-114.html
+WARNING: [HLS 200-471] Dataflow form checks found 1 issue(s) in file /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/v_letterbox.cpp
+Resolution: For help on HLS 200-471 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-471.html
+WARNING: [HLS 207-4615] the argument to '__builtin_assume' has side effects that will be discarded (/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/hls/hls_video_io.h:162:23)
+WARNING: [HLS 207-4615] the argument to '__builtin_assume' has side effects that will be discarded (/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/hls/hls_video_io.h:228:23)
+WARNING: [HLS 207-4615] the argument to '__builtin_assume' has side effects that will be discarded (/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/hls/hls_video_undistort.h:380:35)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 52.57 seconds. CPU system time: 1.8 seconds. Elapsed time: 56.23 seconds; current allocated memory: 777.371 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-131] Inlining function 'void hls::AXIGetBitFields<24, ap_uint<8> >(ap_uint<24>, int, int, ap_uint<8>&)' into 'void hls::AXIGetBitFields<24, ap_uint<8> >(hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, int, int, ap_uint<8>&)' (/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_rgb_to_yuv422_0/bd_0/ip/ip_4/src/hls/hls_axi_io.h:71:2)
+INFO: [HLS 214-131] Inlining function 'hls::Scalar<3, ap_uint<8> >::Scalar()' into 'AXIvideo2MultiPixStream(hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::Scalar<3, ap_uint<8> >, 0>&, unsigned short&, unsigned short&, unsigned short&)' (/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_ltr_0_synth_1/prj/sol/.autopilot/db/v_letterbox.cpp:244:21)
+INFO: [HLS 214-131] Inlining function 'void hls::AXIGetBitFields<24, ap_uint<8> >(hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, int, int, ap_uint<8>&)' into 'AXIvideo2MultiPixStream(hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::Scalar<3, ap_uint<8> >, 0>&, unsigned short&, unsigned short&, unsigned short&)' (/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_ltr_0_synth_1/prj/sol/.autopilot/db/v_letterbox.cpp:291:21)
+INFO: [HLS 214-131] Inlining function 'void hls::AXIGetBitFields<24, ap_uint<8> >(hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, int, int, ap_uint<8>&)' into 'AXIvideo2MultiPixStream(hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::Scalar<3, ap_uint<8> >, 0>&, unsigned short&, unsigned short&, unsigned short&)' (/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_ltr_0_synth_1/prj/sol/.autopilot/db/v_letterbox.cpp:290:21)
+INFO: [HLS 214-131] Inlining function 'void hls::AXIGetBitFields<24, ap_uint<8> >(hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, int, int, ap_uint<8>&)' into 'AXIvideo2MultiPixStream(hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::Scalar<3, ap_uint<8> >, 0>&, unsigned short&, unsigned short&, unsigned short&)' (/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_ltr_0_synth_1/prj/sol/.autopilot/db/v_letterbox.cpp:289:2)
+INFO: [HLS 214-131] Inlining function 'hls::Scalar<3, ap_uint<8> >::Scalar()' into 'v_letterbox_core(hls::stream<hls::Scalar<3, ap_uint<8> >, 0>&, unsigned short&, unsigned short&, unsigned short&, unsigned short&, unsigned short&, unsigned short&, unsigned short&, unsigned short&, unsigned short&, unsigned short&, hls::stream<hls::Scalar<3, ap_uint<8> >, 0>&)' (/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_ltr_0_synth_1/prj/sol/.autopilot/db/v_letterbox.cpp:159:19)
+INFO: [HLS 214-131] Inlining function 'hls::Scalar<3, ap_uint<8> >::Scalar()' into 'v_letterbox_core(hls::stream<hls::Scalar<3, ap_uint<8> >, 0>&, unsigned short&, unsigned short&, unsigned short&, unsigned short&, unsigned short&, unsigned short&, unsigned short&, unsigned short&, unsigned short&, unsigned short&, hls::stream<hls::Scalar<3, ap_uint<8> >, 0>&)' (/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_ltr_0_synth_1/prj/sol/.autopilot/db/v_letterbox.cpp:160:19)
+INFO: [HLS 214-131] Inlining function 'hls::Scalar<3, ap_uint<8> >::Scalar()' into 'MultiPixStream2AXIvideo(hls::stream<hls::Scalar<3, ap_uint<8> >, 0>&, hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, unsigned short&, unsigned short&, unsigned short&)' (/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_ltr_0_synth_1/prj/sol/.autopilot/db/v_letterbox.cpp:336:21)
+INFO: [HLS 214-210] Disaggregating variable 'pix' (/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_ltr_0_synth_1/prj/sol/.autopilot/db/v_letterbox.cpp:244:21)
+INFO: [HLS 214-210] Disaggregating variable 'dstpix' (/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_ltr_0_synth_1/prj/sol/.autopilot/db/v_letterbox.cpp:160:19)
+INFO: [HLS 214-210] Disaggregating variable 'srcpix' (/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_ltr_0_synth_1/prj/sol/.autopilot/db/v_letterbox.cpp:159:19)
+INFO: [HLS 214-210] Disaggregating variable 'pix' (/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_ltr_0_synth_1/prj/sol/.autopilot/db/v_letterbox.cpp:336:21)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_398_3' is marked as complete unroll implied by the pipeline pragma (/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_ltr_0_synth_1/prj/sol/.autopilot/db/v_letterbox.cpp:398:31)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_400_4' is marked as complete unroll implied by the pipeline pragma (/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_ltr_0_synth_1/prj/sol/.autopilot/db/v_letterbox.cpp:400:35)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_174_3' is marked as complete unroll implied by the pipeline pragma (/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_ltr_0_synth_1/prj/sol/.autopilot/db/v_letterbox.cpp:174:25)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_282_1' is marked as complete unroll implied by the pipeline pragma (/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_ltr_0_synth_1/prj/sol/.autopilot/db/v_letterbox.cpp:282:31)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_284_2' is marked as complete unroll implied by the pipeline pragma (/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_ltr_0_synth_1/prj/sol/.autopilot/db/v_letterbox.cpp:284:35)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_398_3' (/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_ltr_0_synth_1/prj/sol/.autopilot/db/v_letterbox.cpp:398:31) in function 'MultiPixStream2AXIvideo' completely with a factor of 1 (/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_ltr_0_synth_1/prj/sol/.autopilot/db/v_letterbox.cpp:334:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_400_4' (/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_ltr_0_synth_1/prj/sol/.autopilot/db/v_letterbox.cpp:400:35) in function 'MultiPixStream2AXIvideo' completely with a factor of 3 (/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_ltr_0_synth_1/prj/sol/.autopilot/db/v_letterbox.cpp:334:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_174_3' (/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_ltr_0_synth_1/prj/sol/.autopilot/db/v_letterbox.cpp:174:25) in function 'v_letterbox_core' completely with a factor of 1 (/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_ltr_0_synth_1/prj/sol/.autopilot/db/v_letterbox.cpp:142:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_282_1' (/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_ltr_0_synth_1/prj/sol/.autopilot/db/v_letterbox.cpp:282:31) in function 'AXIvideo2MultiPixStream' completely with a factor of 1 (/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_ltr_0_synth_1/prj/sol/.autopilot/db/v_letterbox.cpp:241:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_284_2' (/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_ltr_0_synth_1/prj/sol/.autopilot/db/v_letterbox.cpp:284:35) in function 'AXIvideo2MultiPixStream' completely with a factor of 3 (/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_ltr_0_synth_1/prj/sol/.autopilot/db/v_letterbox.cpp:241:0)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'outYUV' with compact=bit mode in 24-bits (/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_ltr_0_synth_1/prj/sol/.autopilot/db/v_letterbox.cpp:100:32)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'srcYUV' with compact=bit mode in 24-bits (/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_ltr_0_synth_1/prj/sol/.autopilot/db/v_letterbox.cpp:99:32)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.none.s_struct.ap_uint<24>s.i24' into 'AXIvideo2MultiPixStream(hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::Scalar<3, ap_uint<8> >, 0>&, unsigned short&, unsigned short&, unsigned short&) (.1)' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:283:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.none.s_struct.ap_uint<1>s.i1' into 'AXIvideo2MultiPixStream(hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::Scalar<3, ap_uint<8> >, 0>&, unsigned short&, unsigned short&, unsigned short&) (.1)' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:283:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.none.s_struct.ap_uint<3>s.i3' into 'AXIvideo2MultiPixStream(hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::Scalar<3, ap_uint<8> >, 0>&, unsigned short&, unsigned short&, unsigned short&) (.1)' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:283:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.bits.i24.s_class.hls::Scalar<3, ap_uint<8> >s.1' into 'AXIvideo2MultiPixStream(hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::Scalar<3, ap_uint<8> >, 0>&, unsigned short&, unsigned short&, unsigned short&) (.1)' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i24.s_class.hls::Scalar<3, ap_uint<8> >s' into 'AXIvideo2MultiPixStream(hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::Scalar<3, ap_uint<8> >, 0>&, unsigned short&, unsigned short&, unsigned short&) (.1)' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i24.a3s_struct.ap_uint<8>s' into '_llvm.fpga.unpack.bits.s_class.hls::Scalar<3, ap_uint<8> >s.i24.1'
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.s_class.hls::Scalar<3, ap_uint<8> >s.i24.1' into 'v_letterbox_core(hls::stream<hls::Scalar<3, ap_uint<8> >, 0>&, unsigned short&, unsigned short&, unsigned short&, unsigned short&, unsigned short&, unsigned short&, unsigned short&, unsigned short&, unsigned short&, unsigned short&, hls::stream<hls::Scalar<3, ap_uint<8> >, 0>&) (.1)' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.bits.i24.s_class.hls::Scalar<3, ap_uint<8> >s.1' into 'v_letterbox_core(hls::stream<hls::Scalar<3, ap_uint<8> >, 0>&, unsigned short&, unsigned short&, unsigned short&, unsigned short&, unsigned short&, unsigned short&, unsigned short&, unsigned short&, unsigned short&, unsigned short&, hls::stream<hls::Scalar<3, ap_uint<8> >, 0>&) (.1)' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i24.s_class.hls::Scalar<3, ap_uint<8> >s' into 'v_letterbox_core(hls::stream<hls::Scalar<3, ap_uint<8> >, 0>&, unsigned short&, unsigned short&, unsigned short&, unsigned short&, unsigned short&, unsigned short&, unsigned short&, unsigned short&, unsigned short&, unsigned short&, hls::stream<hls::Scalar<3, ap_uint<8> >, 0>&) (.1)' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.s_class.hls::Scalar<3, ap_uint<8> >s.i24.1' into 'MultiPixStream2AXIvideo(hls::stream<hls::Scalar<3, ap_uint<8> >, 0>&, hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, unsigned short&, unsigned short&, unsigned short&) (.1)' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i1.s_struct.ap_uint<1>s' into 'MultiPixStream2AXIvideo(hls::stream<hls::Scalar<3, ap_uint<8> >, 0>&, hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, unsigned short&, unsigned short&, unsigned short&) (.1)' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:304:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i3.s_struct.ap_uint<3>s' into 'MultiPixStream2AXIvideo(hls::stream<hls::Scalar<3, ap_uint<8> >, 0>&, hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, unsigned short&, unsigned short&, unsigned short&) (.1)' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:304:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i24.s_struct.ap_uint<24>s' into 'MultiPixStream2AXIvideo(hls::stream<hls::Scalar<3, ap_uint<8> >, 0>&, hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, unsigned short&, unsigned short&, unsigned short&) (.1)' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:304:5)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 4.85 seconds. CPU system time: 0.52 seconds. Elapsed time: 5.49 seconds; current allocated memory: 777.371 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 777.371 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.12 seconds; current allocated memory: 777.371 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.17 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.17 seconds; current allocated memory: 785.008 MB.
+WARNING: [HLS 200-786] Detected dataflow-on-top in function  'v_letterbox' (/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_ltr_0_synth_1/prj/sol/.autopilot/db/v_letterbox.cpp:41:1)  with default interface mode 'ap_ctrl_hs'. Overlapped execution of successive kernel calls will not happen unless interface mode 'ap_ctrl_chain' is used (or 'ap_ctrl_none' for a purely data-driven design).
+Resolution: For help on HLS 200-786 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-786.html
+INFO: [XFORM 203-712] Applying dataflow to function 'v_letterbox' (/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_ltr_0_synth_1/prj/sol/.autopilot/db/v_letterbox.cpp:41:1), detected/extracted 3 process function(s): 
+	 'AXIvideo2MultiPixStream'
+	 'v_letterbox_core'
+	 'MultiPixStream2AXIvideo'.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_ltr_0_synth_1/prj/sol/.autopilot/db/v_letterbox.cpp:171:9) to (/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_ltr_0_synth_1/prj/sol/.autopilot/db/v_letterbox.cpp:167:20) in function 'v_letterbox_core'... converting 6 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_ltr_0_synth_1/prj/sol/.autopilot/db/v_letterbox.cpp:268:9) in function 'AXIvideo2MultiPixStream'... converting 4 basic blocks.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.3 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.32 seconds; current allocated memory: 816.031 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.17 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.19 seconds; current allocated memory: 898.352 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'v_letterbox' ...
+WARNING: [SYN 201-103] Legalizing function name 'reg<unsigned short>' to 'reg_unsigned_short_s'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'reg_unsigned_short_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'reg<unsigned short>'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, function 'reg<unsigned short>'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.09 seconds; current allocated memory: 898.453 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 898.453 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_wait_for_start'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'loop_wait_for_start'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 899.500 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 899.500 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'AXIvideo2MultiPixStream_Pipeline_loop_width' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_width'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'loop_width'
+WARNING: [HLS 200-871] Estimated clock period (5.132ns) exceeds the target (target clock period: 5.625ns, clock uncertainty: 1.51875ns, effective delay budget: 4.10625ns).
+Resolution: For help on HLS 200-871 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-871.html
+WARNING: [HLS 200-1016] The critical path in module 'AXIvideo2MultiPixStream_Pipeline_loop_width' consists of the following:	'alloca' operation ('j') [16]  (0 ns)
+	'load' operation ('j', /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_ltr_0_synth_1/prj/sol/.autopilot/db/v_letterbox.cpp:268) on local variable 'j' [39]  (0 ns)
+	'add' operation ('j', /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_ltr_0_synth_1/prj/sol/.autopilot/db/v_letterbox.cpp:268) [42]  (1.64 ns)
+	'store' operation ('j_write_ln268', /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_ltr_0_synth_1/prj/sol/.autopilot/db/v_letterbox.cpp:268) of variable 'j', /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_ltr_0_synth_1/prj/sol/.autopilot/db/v_letterbox.cpp:268 on local variable 'j' [67]  (1.59 ns)
+	blocking operation 1.9 ns on control path)
+
+Resolution: For help on HLS 200-1016 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-1016.html
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 899.957 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 899.957 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_wait_for_eol'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'loop_wait_for_eol'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 900.352 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 900.352 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'AXIvideo2MultiPixStream' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [HLS 200-871] Estimated clock period (4.154ns) exceeds the target (target clock period: 5.625ns, clock uncertainty: 1.51875ns, effective delay budget: 4.10625ns).
+Resolution: For help on HLS 200-871 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-871.html
+WARNING: [HLS 200-1016] The critical path in module 'AXIvideo2MultiPixStream' consists of the following:	'phi' operation ('axi.last.V') with incoming values : ('axi_last_V_loc_load') ('axi_last_V_4_loc_load') [41]  (0 ns)
+	'call' operation ('_ln248', /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/bd_3a92_ltr_0_synth_1/prj/sol/.autopilot/db/v_letterbox.cpp:248) to 'AXIvideo2MultiPixStream_Pipeline_loop_width' [54]  (4.15 ns)
+
+Resolution: For help on HLS 200-1016 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-1016.html
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 900.727 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 900.727 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'v_letterbox_core_Pipeline_VITIS_LOOP_167_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_167_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_167_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 901.230 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 901.230 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'v_letterbox_core' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 901.598 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 901.598 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_380_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_380_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_380_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.13 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 902.402 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 902.402 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'MultiPixStream2AXIvideo' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 902.574 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 902.574 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'v_letterbox' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 902.574 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 902.574 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'reg_unsigned_short_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'reg_unsigned_short_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.16 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.16 seconds; current allocated memory: 902.574 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 902.891 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'AXIvideo2MultiPixStream_Pipeline_loop_width' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'AXIvideo2MultiPixStream_Pipeline_loop_width' pipeline 'loop_width' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'AXIvideo2MultiPixStream_Pipeline_loop_width'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 903.668 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.14 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.15 seconds; current allocated memory: 904.695 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'AXIvideo2MultiPixStream' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'AXIvideo2MultiPixStream'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 905.859 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'v_letterbox_core_Pipeline_VITIS_LOOP_167_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'v_letterbox_core_Pipeline_VITIS_LOOP_167_2' pipeline 'VITIS_LOOP_167_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'v_letterbox_core_Pipeline_VITIS_LOOP_167_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.13 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 907.227 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'v_letterbox_core' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'v_letterbox_core'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.21 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.22 seconds; current allocated memory: 908.508 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_380_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_380_2' pipeline 'VITIS_LOOP_380_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_380_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 909.668 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'MultiPixStream2AXIvideo' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'MultiPixStream2AXIvideo'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.11 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.13 seconds; current allocated memory: 911.086 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'v_letterbox' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_letterbox/s_axis_video_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_letterbox/s_axis_video_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_letterbox/s_axis_video_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_letterbox/s_axis_video_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_letterbox/s_axis_video_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_letterbox/s_axis_video_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_letterbox/s_axis_video_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_letterbox/height' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_letterbox/width' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_letterbox/video_format' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_letterbox/col_start' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_letterbox/col_end' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_letterbox/row_start' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_letterbox/row_end' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_letterbox/Y_R_value' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_letterbox/Cb_G_value' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_letterbox/Cr_B_value' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_letterbox/m_axis_video_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_letterbox/m_axis_video_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_letterbox/m_axis_video_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_letterbox/m_axis_video_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_letterbox/m_axis_video_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_letterbox/m_axis_video_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_letterbox/m_axis_video_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'v_letterbox' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'width', 'height', 'video_format', 'col_start', 'col_end', 'row_start', 'row_end', 'Y_R_value', 'Cb_G_value', 'Cr_B_value' to AXI-Lite port CTRL.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'v_letterbox'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.17 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.18 seconds; current allocated memory: 912.441 MB.
+INFO: [RTMG 210-285] Implementing FIFO 'srcYUV_U(bd_3a92_ltr_0_fifo_w24_d16_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'outYUV_U(bd_3a92_ltr_0_fifo_w24_d16_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_v_letterbox_core_U0_U(bd_3a92_ltr_0_start_for_v_letterbox_core_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_MultiPixStream2AXIvideo_U0_U(bd_3a92_ltr_0_start_for_MultiPixStream2AXIvideo_U0)' using Shift Registers.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.8 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.84 seconds; current allocated memory: 916.297 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1.88 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.9 seconds; current allocated memory: 922.402 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for v_letterbox with prefix bd_3a92_ltr_0_.
+INFO: [VLOG 209-307] Generating Verilog RTL for v_letterbox with prefix bd_3a92_ltr_0_.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 194.86 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 63.25 seconds. CPU system time: 2.56 seconds. Elapsed time: 67.8 seconds; current allocated memory: 172.973 MB.
+INFO: [HLS 200-1510] Running: export_design -format ip_catalog 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+ipx::create_core: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 3161.395 ; gain = 0.023 ; free physical = 4730 ; free virtual = 14255
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.1/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Mon Aug 29 12:25:56 2022...
+INFO: [HLS 200-802] Generated output file prj/sol/impl/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 25.78 seconds. CPU system time: 1.61 seconds. Elapsed time: 25.84 seconds; current allocated memory: 8.094 MB.
+INFO: [HLS 200-112] Total CPU user time: 97.26 seconds. Total CPU system time: 5.43 seconds. Total elapsed time: 101.11 seconds; peak allocated memory: 930.668 MB.
+INFO: [Common 17-206] Exiting vitis_hls at Mon Aug 29 12:25:59 2022...

@@ -1,0 +1,708 @@
+
+*** Running vivado
+    with args -log design_1_sobel_v1_0_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_sobel_v1_0_0_0.tcl
+
+
+****** Vivado v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source design_1_sobel_v1_0_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/benchmarker/vivado_bsp/vivado-library'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/benchmarker/FPGAProject/ip_repo/sobel_v1_0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.1/data/ip'.
+Command: synth_design -top design_1_sobel_v1_0_0_0 -part xc7z020clg484-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 12908
+WARNING: [Synth 8-9501] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:4023]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3162.105 ; gain = 8.000 ; free physical = 12868 ; free virtual = 19764
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_sobel_v1_0_0_0' [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_sobel_v1_0_0_0/synth/design_1_sobel_v1_0_0_0.vhd:95]
+	Parameter c_s_axi_lite_data_width bound to: 32 - type: integer 
+	Parameter c_s_axi_lite_addr_width bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'sobel_v1_0' declared at '/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ipshared/678a/src/sobel_pkg_top.vhd:5' bound to instance 'U0' of component 'sobel_v1_0' [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_sobel_v1_0_0_0/synth/design_1_sobel_v1_0_0_0.vhd:188]
+INFO: [Synth 8-638] synthesizing module 'sobel_v1_0' [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ipshared/678a/src/sobel_pkg_top.vhd:61]
+	Parameter c_s_axi_data_width bound to: 32 - type: integer 
+	Parameter c_s_axi_addr_width bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'sobel_v1_0_S_AXI_Lite' declared at '/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ipshared/678a/src/sobel_v1_0_S_AXI_Lite.vhd:5' bound to instance 'sobel_v1_0_s_axi_lite_inst' of component 'sobel_v1_0_s_axi_lite' [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ipshared/678a/src/sobel_pkg_top.vhd:120]
+INFO: [Synth 8-638] synthesizing module 'sobel_v1_0_S_AXI_Lite' [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ipshared/678a/src/sobel_v1_0_S_AXI_Lite.vhd:86]
+INFO: [Synth 8-226] default block is never used [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ipshared/678a/src/sobel_v1_0_S_AXI_Lite.vhd:224]
+INFO: [Synth 8-226] default block is never used [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ipshared/678a/src/sobel_v1_0_S_AXI_Lite.vhd:354]
+INFO: [Synth 8-256] done synthesizing module 'sobel_v1_0_S_AXI_Lite' (0#1) [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ipshared/678a/src/sobel_v1_0_S_AXI_Lite.vhd:86]
+INFO: [Synth 8-3491] module 'sobel_top' declared at '/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ipshared/678a/src/Sobel_top.vhd:5' bound to instance 'sobel_top_inst' of component 'sobel_top' [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ipshared/678a/src/sobel_pkg_top.vhd:151]
+INFO: [Synth 8-638] synthesizing module 'sobel_top' [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ipshared/678a/src/Sobel_top.vhd:25]
+INFO: [Synth 8-3491] module 'fifo_generator_0' declared at '/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_sobel_v1_0_0_0/src/fifo_generator_0/synth/fifo_generator_0.vhd:59' bound to instance 'ins_outputbuffer' of component 'fifo_generator_0' [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ipshared/678a/src/Sobel_top.vhd:102]
+INFO: [Synth 8-638] synthesizing module 'fifo_generator_0' [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_sobel_v1_0_0_0/src/fifo_generator_0/synth/fifo_generator_0.vhd:75]
+	Parameter C_COMMON_CLOCK bound to: 1 - type: integer 
+	Parameter C_SELECT_XPM bound to: 0 - type: integer 
+	Parameter C_COUNT_TYPE bound to: 0 - type: integer 
+	Parameter C_DATA_COUNT_WIDTH bound to: 10 - type: integer 
+	Parameter C_DEFAULT_VALUE bound to: BlankString - type: string 
+	Parameter C_DIN_WIDTH bound to: 18 - type: integer 
+	Parameter C_DOUT_RST_VAL bound to: 0 - type: string 
+	Parameter C_DOUT_WIDTH bound to: 18 - type: integer 
+	Parameter C_ENABLE_RLOCS bound to: 0 - type: integer 
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_FULL_FLAGS_RST_VAL bound to: 1 - type: integer 
+	Parameter C_HAS_ALMOST_EMPTY bound to: 0 - type: integer 
+	Parameter C_HAS_ALMOST_FULL bound to: 0 - type: integer 
+	Parameter C_HAS_BACKUP bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNT bound to: 0 - type: integer 
+	Parameter C_HAS_INT_CLK bound to: 0 - type: integer 
+	Parameter C_HAS_MEMINIT_FILE bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_RD_DATA_COUNT bound to: 0 - type: integer 
+	Parameter C_HAS_RD_RST bound to: 0 - type: integer 
+	Parameter C_HAS_RST bound to: 1 - type: integer 
+	Parameter C_HAS_SRST bound to: 0 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_VALID bound to: 0 - type: integer 
+	Parameter C_HAS_WR_ACK bound to: 0 - type: integer 
+	Parameter C_HAS_WR_DATA_COUNT bound to: 0 - type: integer 
+	Parameter C_HAS_WR_RST bound to: 0 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE bound to: 0 - type: integer 
+	Parameter C_INIT_WR_PNTR_VAL bound to: 0 - type: integer 
+	Parameter C_MEMORY_TYPE bound to: 1 - type: integer 
+	Parameter C_MIF_FILE_NAME bound to: BlankString - type: string 
+	Parameter C_OPTIMIZATION_MODE bound to: 0 - type: integer 
+	Parameter C_OVERFLOW_LOW bound to: 0 - type: integer 
+	Parameter C_PRELOAD_LATENCY bound to: 1 - type: integer 
+	Parameter C_PRELOAD_REGS bound to: 0 - type: integer 
+	Parameter C_PRIM_FIFO_TYPE bound to: 4kx4 - type: string 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL bound to: 2 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_NEGATE_VAL bound to: 3 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL bound to: 1022 - type: integer 
+	Parameter C_PROG_FULL_THRESH_NEGATE_VAL bound to: 1021 - type: integer 
+	Parameter C_PROG_FULL_TYPE bound to: 0 - type: integer 
+	Parameter C_RD_DATA_COUNT_WIDTH bound to: 10 - type: integer 
+	Parameter C_RD_DEPTH bound to: 1024 - type: integer 
+	Parameter C_RD_FREQ bound to: 1 - type: integer 
+	Parameter C_RD_PNTR_WIDTH bound to: 10 - type: integer 
+	Parameter C_UNDERFLOW_LOW bound to: 0 - type: integer 
+	Parameter C_USE_DOUT_RST bound to: 1 - type: integer 
+	Parameter C_USE_ECC bound to: 0 - type: integer 
+	Parameter C_USE_EMBEDDED_REG bound to: 0 - type: integer 
+	Parameter C_USE_PIPELINE_REG bound to: 0 - type: integer 
+	Parameter C_POWER_SAVING_MODE bound to: 0 - type: integer 
+	Parameter C_USE_FIFO16_FLAGS bound to: 0 - type: integer 
+	Parameter C_USE_FWFT_DATA_COUNT bound to: 0 - type: integer 
+	Parameter C_VALID_LOW bound to: 0 - type: integer 
+	Parameter C_WR_ACK_LOW bound to: 0 - type: integer 
+	Parameter C_WR_DATA_COUNT_WIDTH bound to: 10 - type: integer 
+	Parameter C_WR_DEPTH bound to: 1024 - type: integer 
+	Parameter C_WR_FREQ bound to: 1 - type: integer 
+	Parameter C_WR_PNTR_WIDTH bound to: 10 - type: integer 
+	Parameter C_WR_RESPONSE_LATENCY bound to: 1 - type: integer 
+	Parameter C_MSGON_VAL bound to: 1 - type: integer 
+	Parameter C_ENABLE_RST_SYNC bound to: 1 - type: integer 
+	Parameter C_EN_SAFETY_CKT bound to: 1 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE bound to: 0 - type: integer 
+	Parameter C_SYNCHRONIZER_STAGE bound to: 2 - type: integer 
+	Parameter C_INTERFACE_TYPE bound to: 1 - type: integer 
+	Parameter C_AXI_TYPE bound to: 1 - type: integer 
+	Parameter C_HAS_AXI_WR_CHANNEL bound to: 1 - type: integer 
+	Parameter C_HAS_AXI_RD_CHANNEL bound to: 1 - type: integer 
+	Parameter C_HAS_SLAVE_CE bound to: 0 - type: integer 
+	Parameter C_HAS_MASTER_CE bound to: 0 - type: integer 
+	Parameter C_ADD_NGC_CONSTRAINT bound to: 0 - type: integer 
+	Parameter C_USE_COMMON_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_USE_COMMON_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_USE_DEFAULT_SETTINGS bound to: 0 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_AXI_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_AXI_LEN_WIDTH bound to: 8 - type: integer 
+	Parameter C_AXI_LOCK_WIDTH bound to: 1 - type: integer 
+	Parameter C_HAS_AXI_ID bound to: 0 - type: integer 
+	Parameter C_HAS_AXI_AWUSER bound to: 0 - type: integer 
+	Parameter C_HAS_AXI_WUSER bound to: 0 - type: integer 
+	Parameter C_HAS_AXI_BUSER bound to: 0 - type: integer 
+	Parameter C_HAS_AXI_ARUSER bound to: 0 - type: integer 
+	Parameter C_HAS_AXI_RUSER bound to: 0 - type: integer 
+	Parameter C_AXI_ARUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_AWUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_WUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_BUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_HAS_AXIS_TDATA bound to: 1 - type: integer 
+	Parameter C_HAS_AXIS_TID bound to: 0 - type: integer 
+	Parameter C_HAS_AXIS_TDEST bound to: 0 - type: integer 
+	Parameter C_HAS_AXIS_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_AXIS_TREADY bound to: 1 - type: integer 
+	Parameter C_HAS_AXIS_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_AXIS_TSTRB bound to: 0 - type: integer 
+	Parameter C_HAS_AXIS_TKEEP bound to: 0 - type: integer 
+	Parameter C_AXIS_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_AXIS_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TSTRB_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TKEEP_WIDTH bound to: 1 - type: integer 
+	Parameter C_WACH_TYPE bound to: 0 - type: integer 
+	Parameter C_WDCH_TYPE bound to: 0 - type: integer 
+	Parameter C_WRCH_TYPE bound to: 0 - type: integer 
+	Parameter C_RACH_TYPE bound to: 0 - type: integer 
+	Parameter C_RDCH_TYPE bound to: 0 - type: integer 
+	Parameter C_AXIS_TYPE bound to: 0 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_WACH bound to: 2 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_WDCH bound to: 1 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_WRCH bound to: 2 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_RACH bound to: 2 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_RDCH bound to: 1 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_AXIS bound to: 1 - type: integer 
+	Parameter C_APPLICATION_TYPE_WACH bound to: 0 - type: integer 
+	Parameter C_APPLICATION_TYPE_WDCH bound to: 0 - type: integer 
+	Parameter C_APPLICATION_TYPE_WRCH bound to: 0 - type: integer 
+	Parameter C_APPLICATION_TYPE_RACH bound to: 0 - type: integer 
+	Parameter C_APPLICATION_TYPE_RDCH bound to: 0 - type: integer 
+	Parameter C_APPLICATION_TYPE_AXIS bound to: 0 - type: integer 
+	Parameter C_PRIM_FIFO_TYPE_WACH bound to: 512x36 - type: string 
+	Parameter C_PRIM_FIFO_TYPE_WDCH bound to: 1kx36 - type: string 
+	Parameter C_PRIM_FIFO_TYPE_WRCH bound to: 512x36 - type: string 
+	Parameter C_PRIM_FIFO_TYPE_RACH bound to: 512x36 - type: string 
+	Parameter C_PRIM_FIFO_TYPE_RDCH bound to: 1kx36 - type: string 
+	Parameter C_PRIM_FIFO_TYPE_AXIS bound to: 512x36 - type: string 
+	Parameter C_USE_ECC_WACH bound to: 0 - type: integer 
+	Parameter C_USE_ECC_WDCH bound to: 0 - type: integer 
+	Parameter C_USE_ECC_WRCH bound to: 0 - type: integer 
+	Parameter C_USE_ECC_RACH bound to: 0 - type: integer 
+	Parameter C_USE_ECC_RDCH bound to: 0 - type: integer 
+	Parameter C_USE_ECC_AXIS bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_WACH bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_WDCH bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_WRCH bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_RACH bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_RDCH bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_AXIS bound to: 0 - type: integer 
+	Parameter C_DIN_WIDTH_WACH bound to: 32 - type: integer 
+	Parameter C_DIN_WIDTH_WDCH bound to: 64 - type: integer 
+	Parameter C_DIN_WIDTH_WRCH bound to: 2 - type: integer 
+	Parameter C_DIN_WIDTH_RACH bound to: 32 - type: integer 
+	Parameter C_DIN_WIDTH_RDCH bound to: 64 - type: integer 
+	Parameter C_DIN_WIDTH_AXIS bound to: 8 - type: integer 
+	Parameter C_WR_DEPTH_WACH bound to: 16 - type: integer 
+	Parameter C_WR_DEPTH_WDCH bound to: 1024 - type: integer 
+	Parameter C_WR_DEPTH_WRCH bound to: 16 - type: integer 
+	Parameter C_WR_DEPTH_RACH bound to: 16 - type: integer 
+	Parameter C_WR_DEPTH_RDCH bound to: 1024 - type: integer 
+	Parameter C_WR_DEPTH_AXIS bound to: 32 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_WACH bound to: 4 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_WDCH bound to: 10 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_WRCH bound to: 4 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_RACH bound to: 4 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_RDCH bound to: 10 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_AXIS bound to: 5 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_WACH bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_WDCH bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_WRCH bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_RACH bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_RDCH bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_AXIS bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_WACH bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_WDCH bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_WRCH bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_RACH bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_RDCH bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_AXIS bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_WACH bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_WDCH bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_WRCH bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_RACH bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_RDCH bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_AXIS bound to: 1 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_WACH bound to: 15 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_WDCH bound to: 1023 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_WRCH bound to: 15 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_RACH bound to: 15 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_RDCH bound to: 1023 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_AXIS bound to: 16 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_WACH bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_WDCH bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_WRCH bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_RACH bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_RDCH bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_AXIS bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_WACH bound to: 14 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_WDCH bound to: 1022 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_WRCH bound to: 14 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_RACH bound to: 14 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_RDCH bound to: 1022 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_AXIS bound to: 30 - type: integer 
+	Parameter C_REG_SLICE_MODE_WACH bound to: 0 - type: integer 
+	Parameter C_REG_SLICE_MODE_WDCH bound to: 0 - type: integer 
+	Parameter C_REG_SLICE_MODE_WRCH bound to: 0 - type: integer 
+	Parameter C_REG_SLICE_MODE_RACH bound to: 0 - type: integer 
+	Parameter C_REG_SLICE_MODE_RDCH bound to: 0 - type: integer 
+	Parameter C_REG_SLICE_MODE_AXIS bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'fifo_generator_v13_2_7' declared at '/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_sobel_v1_0_0_0/src/fifo_generator_0/hdl/fifo_generator_v13_2_vhsyn_rfs.vhd:38604' bound to instance 'U0' of component 'fifo_generator_v13_2_7' [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_sobel_v1_0_0_0/src/fifo_generator_0/synth/fifo_generator_0.vhd:547]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_sync_rst' [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1058]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_sync_rst' (0#1) [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1058]
+INFO: [Synth 8-256] done synthesizing module 'fifo_generator_0' (0#1) [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_sobel_v1_0_0_0/src/fifo_generator_0/synth/fifo_generator_0.vhd:75]
+INFO: [Synth 8-3491] module 'rgbtogray' declared at '/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ipshared/678a/src/rgbtogray.vhd:4' bound to instance 'rgbtogray_inst' of component 'rgbtogray' [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ipshared/678a/src/Sobel_top.vhd:117]
+INFO: [Synth 8-638] synthesizing module 'rgbtogray' [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ipshared/678a/src/rgbtogray.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'rgbtogray' (0#1) [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ipshared/678a/src/rgbtogray.vhd:14]
+INFO: [Synth 8-3491] module 'kontrolle' declared at '/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ipshared/678a/src/kontroll.vhd:5' bound to instance 'kontrolle_inst' of component 'kontrolle' [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ipshared/678a/src/Sobel_top.vhd:126]
+INFO: [Synth 8-638] synthesizing module 'kontrolle' [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ipshared/678a/src/kontroll.vhd:24]
+WARNING: [Synth 8-614] signal 'stor_pixel_count_r' is read in the process but is not in the sensitivity list [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ipshared/678a/src/kontroll.vhd:75]
+WARNING: [Synth 8-614] signal 'rd_counter_r' is read in the process but is not in the sensitivity list [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ipshared/678a/src/kontroll.vhd:92]
+WARNING: [Synth 8-614] signal 'wr_linepixel_counter_r' is read in the process but is not in the sensitivity list [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ipshared/678a/src/kontroll.vhd:109]
+WARNING: [Synth 8-614] signal 'nr_wrline_r' is read in the process but is not in the sensitivity list [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ipshared/678a/src/kontroll.vhd:129]
+WARNING: [Synth 8-614] signal 'nr_rdline_r' is read in the process but is not in the sensitivity list [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ipshared/678a/src/kontroll.vhd:146]
+INFO: [Synth 8-226] default block is never used [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ipshared/678a/src/kontroll.vhd:164]
+INFO: [Synth 8-226] default block is never used [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ipshared/678a/src/kontroll.vhd:203]
+INFO: [Synth 8-3491] module 'linebuffer' declared at '/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ipshared/678a/src/linebuffer.vhd:5' bound to instance 'line0' of component 'linebuffer' [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ipshared/678a/src/kontroll.vhd:298]
+INFO: [Synth 8-638] synthesizing module 'linebuffer' [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ipshared/678a/src/linebuffer.vhd:17]
+WARNING: [Synth 8-614] signal 'wrptr_r' is read in the process but is not in the sensitivity list [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ipshared/678a/src/linebuffer.vhd:28]
+WARNING: [Synth 8-614] signal 'rdptr_r' is read in the process but is not in the sensitivity list [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ipshared/678a/src/linebuffer.vhd:47]
+INFO: [Synth 8-256] done synthesizing module 'linebuffer' (0#1) [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ipshared/678a/src/linebuffer.vhd:17]
+INFO: [Synth 8-3491] module 'linebuffer' declared at '/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ipshared/678a/src/linebuffer.vhd:5' bound to instance 'line1' of component 'linebuffer' [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ipshared/678a/src/kontroll.vhd:309]
+INFO: [Synth 8-3491] module 'linebuffer' declared at '/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ipshared/678a/src/linebuffer.vhd:5' bound to instance 'line2' of component 'linebuffer' [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ipshared/678a/src/kontroll.vhd:320]
+INFO: [Synth 8-3491] module 'linebuffer' declared at '/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ipshared/678a/src/linebuffer.vhd:5' bound to instance 'line3' of component 'linebuffer' [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ipshared/678a/src/kontroll.vhd:331]
+INFO: [Synth 8-256] done synthesizing module 'kontrolle' (0#1) [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ipshared/678a/src/kontroll.vhd:24]
+INFO: [Synth 8-3491] module 'faltung' declared at '/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ipshared/678a/src/faltung.vhd:5' bound to instance 'faltung_inst' of component 'faltung' [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ipshared/678a/src/Sobel_top.vhd:142]
+INFO: [Synth 8-638] synthesizing module 'faltung' [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ipshared/678a/src/faltung.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'faltung' (0#1) [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ipshared/678a/src/faltung.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'sobel_top' (0#1) [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ipshared/678a/src/Sobel_top.vhd:25]
+INFO: [Synth 8-256] done synthesizing module 'sobel_v1_0' (0#1) [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ipshared/678a/src/sobel_pkg_top.vhd:61]
+INFO: [Synth 8-256] done synthesizing module 'design_1_sobel_v1_0_0_0' (0#1) [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_sobel_v1_0_0_0/synth/design_1_sobel_v1_0_0_0.vhd:95]
+WARNING: [Synth 8-6014] Unused sequential element multiresh_r_reg[8] was removed.  [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ipshared/678a/src/faltung.vhd:86]
+WARNING: [Synth 8-6014] Unused sequential element multiresh_r_reg[0] was removed.  [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ipshared/678a/src/faltung.vhd:86]
+WARNING: [Synth 8-7129] Port data_i[39] in module faltung is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[38] in module faltung is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[37] in module faltung is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[36] in module faltung is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[35] in module faltung is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[34] in module faltung is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[33] in module faltung is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[32] in module faltung is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rgbdata_i[31] in module rgbtogray is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rgbdata_i[30] in module rgbtogray is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rgbdata_i[29] in module rgbtogray is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rgbdata_i[28] in module rgbtogray is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rgbdata_i[27] in module rgbtogray is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rgbdata_i[26] in module rgbtogray is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rgbdata_i[25] in module rgbtogray is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rgbdata_i[24] in module rgbtogray is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ALMOST_FULL_I in module output_blk is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ALMOST_EMPTY_I in module output_blk is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_EMPTY_I in module output_blk is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_ACK_I in module output_blk is either unconnected or has no load
+WARNING: [Synth 8-7129] Port VALID_I in module output_blk is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OVERFLOW_I in module output_blk is either unconnected or has no load
+WARNING: [Synth 8-7129] Port UNDERFLOW_I in module output_blk is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DATA_COUNT_I[5] in module output_blk is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DATA_COUNT_I[4] in module output_blk is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DATA_COUNT_I[3] in module output_blk is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DATA_COUNT_I[2] in module output_blk is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DATA_COUNT_I[1] in module output_blk is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DATA_COUNT_I[0] in module output_blk is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_DATA_COUNT_I[5] in module output_blk is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_DATA_COUNT_I[4] in module output_blk is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_DATA_COUNT_I[3] in module output_blk is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_DATA_COUNT_I[2] in module output_blk is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_DATA_COUNT_I[1] in module output_blk is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_DATA_COUNT_I[0] in module output_blk is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RD_DATA_COUNT_I[5] in module output_blk is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RD_DATA_COUNT_I[4] in module output_blk is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RD_DATA_COUNT_I[3] in module output_blk is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RD_DATA_COUNT_I[2] in module output_blk is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RD_DATA_COUNT_I[1] in module output_blk is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RD_DATA_COUNT_I[0] in module output_blk is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SBITERR_I in module output_blk is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DBITERR_I in module output_blk is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH[4] in module wr_pf_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH[3] in module wr_pf_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH[2] in module wr_pf_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH[1] in module wr_pf_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH[0] in module wr_pf_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH_ASSERT[4] in module wr_pf_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH_ASSERT[3] in module wr_pf_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH_ASSERT[2] in module wr_pf_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH_ASSERT[1] in module wr_pf_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH_ASSERT[0] in module wr_pf_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH_NEGATE[4] in module wr_pf_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH_NEGATE[3] in module wr_pf_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH_NEGATE[2] in module wr_pf_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH_NEGATE[1] in module wr_pf_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH_NEGATE[0] in module wr_pf_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_RST in module wr_pf_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RST_FULL_FF in module wr_pf_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FULL in module wr_pf_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EMPTY in module wr_pf_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RAM_ALMOST_FULL in module wr_pf_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RAM_ALMOST_EMPTY in module wr_pf_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_PNTR[4] in module wr_pf_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_PNTR[3] in module wr_pf_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_PNTR[2] in module wr_pf_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_PNTR[1] in module wr_pf_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_PNTR[0] in module wr_pf_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RST_FULL_FF in module wr_status_flags_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_RST in module wr_status_flags_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SRST in module wr_status_flags_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SAFETY_CKT_WR_RST in module wr_status_flags_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_PNTR_PLUS2[4] in module wr_status_flags_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_PNTR_PLUS2[3] in module wr_status_flags_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_PNTR_PLUS2[2] in module wr_status_flags_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_PNTR_PLUS2[1] in module wr_status_flags_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_PNTR_PLUS2[0] in module wr_status_flags_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_PNTR_PLUS3[4] in module wr_status_flags_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_PNTR_PLUS3[3] in module wr_status_flags_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_PNTR_PLUS3[2] in module wr_status_flags_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_PNTR_PLUS3[1] in module wr_status_flags_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_PNTR_PLUS3[0] in module wr_status_flags_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RST in module wr_bin_cntr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_EN_INTO_LOGIC in module wr_logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_RST_INTO_LOGIC in module wr_logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RD_EN in module wr_logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_RST_BUSY in module wr_logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RD_RST in module rd_fwft is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SAFETY_CKT_RD_RST in module rd_fwft is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RAM_ALMOST_EMPTY in module rd_fwft is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RD_RST in module rd_status_flags_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SAFETY_CKT_RD_RST in module rd_status_flags_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RD_PNTR_PLUS2[4] in module rd_status_flags_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RD_PNTR_PLUS2[3] in module rd_status_flags_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RD_PNTR_PLUS2[2] in module rd_status_flags_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RD_PNTR_PLUS2[1] in module rd_status_flags_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RD_PNTR_PLUS2[0] in module rd_status_flags_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RST in module rd_bin_cntr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RD_EN_INTO_LOGIC in module rd_logic is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 3199.246 ; gain = 45.141 ; free physical = 13909 ; free virtual = 20824
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 3199.246 ; gain = 45.141 ; free physical = 13909 ; free virtual = 20824
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 3199.246 ; gain = 45.141 ; free physical = 13909 ; free virtual = 20824
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3199.246 ; gain = 0.000 ; free physical = 13900 ; free virtual = 20815
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_sobel_v1_0_0_0/src/fifo_generator_0/fifo_generator_0.xdc] for cell 'U0/sobel_top_inst/ins_outputbuffer/U0'
+Finished Parsing XDC File [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ip/design_1_sobel_v1_0_0_0/src/fifo_generator_0/fifo_generator_0.xdc] for cell 'U0/sobel_top_inst/ins_outputbuffer/U0'
+Parsing XDC File [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/design_1_sobel_v1_0_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/design_1_sobel_v1_0_0_0_synth_1/dont_touch.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/design_1_sobel_v1_0_0_0_synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_sobel_v1_0_0_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_sobel_v1_0_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-1714] 1 XPM XDC files have been applied to the design.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3331.723 ; gain = 0.000 ; free physical = 13827 ; free virtual = 20755
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3331.723 ; gain = 0.000 ; free physical = 13826 ; free virtual = 20755
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 3331.723 ; gain = 177.617 ; free physical = 13885 ; free virtual = 20813
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 3331.723 ; gain = 177.617 ; free physical = 13885 ; free virtual = 20813
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for U0/sobel_top_inst/ins_outputbuffer/U0. (constraint file  /home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/design_1_sobel_v1_0_0_0_synth_1/dont_touch.xdc, line 11).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/sobel_top_inst/ins_outputbuffer. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/sobel_top_inst/ins_outputbuffer/U0/inst_fifo_gen/\gaxis_fifo.gaxisf.axisf /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst . (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 3331.723 ; gain = 177.617 ; free physical = 13885 ; free virtual = 20813
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'gpregsm1.curr_fwft_state_reg' in module 'rd_fwft'
+INFO: [Synth 8-6159] Found Keep on FSM register 'gpregsm1.curr_fwft_state_reg' in module 'rd_fwft', re-encoding will not be performed
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 invalid |                               00 |                               00
+            stage1_valid |                               10 |                               10
+       both_stages_valid |                               11 |                               11
+            stage2_valid |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 3331.723 ; gain = 177.617 ; free physical = 13884 ; free virtual = 20817
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   10 Bit       Adders := 28    
+	   6 Input    8 Bit       Adders := 1     
+	   2 Input    6 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 2     
+	   2 Input    2 Bit       Adders := 2     
++---XORs : 
+	   2 Input      1 Bit         XORs := 22    
++---Registers : 
+	               48 Bit    Registers := 1     
+	               32 Bit    Registers := 5     
+	               28 Bit    Registers := 1     
+	               18 Bit    Registers := 5     
+	               14 Bit    Registers := 1     
+	               10 Bit    Registers := 10    
+	                8 Bit    Registers := 2     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 7     
+	                4 Bit    Registers := 3     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 37    
++---Muxes : 
+	   4 Input   72 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 4     
+	   4 Input   32 Bit        Muxes := 5     
+	   2 Input   10 Bit        Muxes := 14    
+	   4 Input    4 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 10    
+	   5 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 19    
+	   3 Input    1 Bit        Muxes := 1     
+	   4 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3936] Found unconnected internal register 'faltung_inst/sumresv_r_reg' and it is trimmed from '18' to '13' bits. [/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.gen/sources_1/bd/design_1/ipshared/678a/src/faltung.vhd:89]
+DSP Report: Generating DSP faltung_inst/quadresh_r_reg, operation Mode is: (A2*B2)'.
+DSP Report: register faltung_inst/sumresh_r_reg is absorbed into DSP faltung_inst/quadresh_r_reg.
+DSP Report: register faltung_inst/sumresh_r_reg is absorbed into DSP faltung_inst/quadresh_r_reg.
+DSP Report: register faltung_inst/quadresh_r_reg is absorbed into DSP faltung_inst/quadresh_r_reg.
+DSP Report: operator faltung_inst/quadresh_r_nxt is absorbed into DSP faltung_inst/quadresh_r_reg.
+DSP Report: Generating DSP faltung_inst/checkres_reg, operation Mode is: (PCIN+(A2*B2)')'.
+DSP Report: register faltung_inst/sumresv_r_reg is absorbed into DSP faltung_inst/checkres_reg.
+DSP Report: register faltung_inst/sumresv_r_reg is absorbed into DSP faltung_inst/checkres_reg.
+DSP Report: register faltung_inst/checkres_reg is absorbed into DSP faltung_inst/checkres_reg.
+DSP Report: register faltung_inst/quadresv_r_reg is absorbed into DSP faltung_inst/checkres_reg.
+DSP Report: operator faltung_inst/checkres_nxt is absorbed into DSP faltung_inst/checkres_reg.
+DSP Report: operator faltung_inst/quadresv_r_nxt is absorbed into DSP faltung_inst/checkres_reg.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 3331.723 ; gain = 177.617 ; free physical = 13860 ; free virtual = 20806
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++------------------------+---------------------------------------------------+-----------+----------------------+---------------+
+|Module Name             | RTL Object                                        | Inference | Size (Depth x Width) | Primitives    | 
++------------------------+---------------------------------------------------+-----------+----------------------+---------------+
+|design_1_sobel_v1_0_0_0 | U0/sobel_top_inst/kontrolle_inst/line3/line_r_reg | Implied   | 1 K x 8              | RAM64M x 144  | 
+|design_1_sobel_v1_0_0_0 | U0/sobel_top_inst/kontrolle_inst/line0/line_r_reg | Implied   | 1 K x 8              | RAM64M x 144  | 
+|design_1_sobel_v1_0_0_0 | U0/sobel_top_inst/kontrolle_inst/line1/line_r_reg | Implied   | 1 K x 8              | RAM64M x 144  | 
+|design_1_sobel_v1_0_0_0 | U0/sobel_top_inst/kontrolle_inst/line2/line_r_reg | Implied   | 1 K x 8              | RAM64M x 144  | 
++------------------------+---------------------------------------------------+-----------+----------------------+---------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping      | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|faltung     | (A2*B2)'         | 14     | 14     | -      | -      | 28     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|faltung     | (PCIN+(A2*B2)')' | 14     | 14     | -      | -      | 28     | 1    | 1    | -    | -    | -     | 1    | 1    | 
++------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 3331.723 ; gain = 177.617 ; free physical = 13712 ; free virtual = 20666
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 3331.723 ; gain = 177.617 ; free physical = 13712 ; free virtual = 20665
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping Report
++------------------------+---------------------------------------------------+-----------+----------------------+---------------+
+|Module Name             | RTL Object                                        | Inference | Size (Depth x Width) | Primitives    | 
++------------------------+---------------------------------------------------+-----------+----------------------+---------------+
+|design_1_sobel_v1_0_0_0 | U0/sobel_top_inst/kontrolle_inst/line3/line_r_reg | Implied   | 1 K x 8              | RAM64M x 144  | 
+|design_1_sobel_v1_0_0_0 | U0/sobel_top_inst/kontrolle_inst/line0/line_r_reg | Implied   | 1 K x 8              | RAM64M x 144  | 
+|design_1_sobel_v1_0_0_0 | U0/sobel_top_inst/kontrolle_inst/line1/line_r_reg | Implied   | 1 K x 8              | RAM64M x 144  | 
+|design_1_sobel_v1_0_0_0 | U0/sobel_top_inst/kontrolle_inst/line2/line_r_reg | Implied   | 1 K x 8              | RAM64M x 144  | 
++------------------------+---------------------------------------------------+-----------+----------------------+---------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 3331.723 ; gain = 177.617 ; free physical = 13699 ; free virtual = 20653
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 3331.723 ; gain = 177.617 ; free physical = 13690 ; free virtual = 20643
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 3331.723 ; gain = 177.617 ; free physical = 13690 ; free virtual = 20643
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 3331.723 ; gain = 177.617 ; free physical = 13689 ; free virtual = 20643
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 3331.723 ; gain = 177.617 ; free physical = 13690 ; free virtual = 20643
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 3331.723 ; gain = 177.617 ; free physical = 13691 ; free virtual = 20644
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 3331.723 ; gain = 177.617 ; free physical = 13691 ; free virtual = 20644
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name             | RTL Name                                                                                                                                                                                                          | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|fifo_generator_v13_2_7  | inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[4] | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|design_1_sobel_v1_0_0_0 | U0/sobel_top_inst/faltung_inst/checkres_valid_r_reg                                                                                                                                                               | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
++------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping      | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|faltung     | (A'*B')'         | 30     | 18     | -      | -      | 0      | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|faltung     | (PCIN+(A'*B')')' | 30     | 18     | -      | -      | 28     | 1    | 1    | -    | -    | -     | 1    | 1    | 
++------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |    71|
+|2     |DSP48E1  |     2|
+|4     |LUT1     |    39|
+|5     |LUT2     |   183|
+|6     |LUT3     |   301|
+|7     |LUT4     |   358|
+|8     |LUT5     |   145|
+|9     |LUT6     |   486|
+|10    |MUXF7    |   112|
+|11    |MUXF8    |    32|
+|12    |RAM64M   |   576|
+|13    |RAMB18E1 |     1|
+|14    |SRL16E   |     2|
+|15    |FDCE     |   121|
+|16    |FDRE     |   329|
+|17    |FDSE     |    16|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 3331.723 ; gain = 177.617 ; free physical = 13691 ; free virtual = 20644
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 495 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 3331.723 ; gain = 45.141 ; free physical = 13748 ; free virtual = 20702
+Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 3331.723 ; gain = 177.617 ; free physical = 13748 ; free virtual = 20702
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3331.723 ; gain = 0.000 ; free physical = 13844 ; free virtual = 20797
+INFO: [Netlist 29-17] Analyzing 794 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3331.723 ; gain = 0.000 ; free physical = 13773 ; free virtual = 20727
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 576 instances were transformed.
+  RAM64M => RAM64M (RAMD64E(x4)): 576 instances
+
+Synth Design complete, checksum: fbcdd870
+INFO: [Common 17-83] Releasing license: Synthesis
+62 Infos, 112 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:44 ; elapsed = 00:00:40 . Memory (MB): peak = 3331.723 ; gain = 177.617 ; free physical = 13991 ; free virtual = 20945
+INFO: [Common 17-1381] The checkpoint '/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/design_1_sobel_v1_0_0_0_synth_1/design_1_sobel_v1_0_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_sobel_v1_0_0_0, cache-ID = 91eed9b732f0c873
+INFO: [Coretcl 2-1174] Renamed 32 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/benchmarker/FPGAProject/SOBEL_HDMI_1024/SOBEL_HDMI_1024.runs/design_1_sobel_v1_0_0_0_synth_1/design_1_sobel_v1_0_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_sobel_v1_0_0_0_utilization_synth.rpt -pb design_1_sobel_v1_0_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Sep  4 11:27:56 2022...

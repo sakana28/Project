@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="v_hscaler" xd:componentRef="v_hscaler" xd:initiationInterval="x" xd:clockPeriod="5.625" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="s_axi_CTRL" xd:busTypeRef="axilite" xd:type="generic_axi_lite" xd:offset="0x0"/>
+  <xd:arg xd:name="s_axis_video" xd:originalName="s_axis_video" xd:direction="in" xd:interfaceRef="s_axis_video" xd:busTypeRef="axis" xd:dataWidth="24"/>
+  <xd:arg xd:name="Height" xd:originalName="Height" xd:direction="in" xd:interfaceRef="s_axi_CTRL" xd:busTypeRef="axilite" xd:offset="0x10" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="WidthIn" xd:originalName="WidthIn" xd:direction="in" xd:interfaceRef="s_axi_CTRL" xd:busTypeRef="axilite" xd:offset="0x18" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="WidthOut" xd:originalName="WidthOut" xd:direction="in" xd:interfaceRef="s_axi_CTRL" xd:busTypeRef="axilite" xd:offset="0x20" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="ColorMode" xd:originalName="ColorMode" xd:direction="in" xd:interfaceRef="s_axi_CTRL" xd:busTypeRef="axilite" xd:offset="0x28" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="PixelRate" xd:originalName="PixelRate" xd:direction="in" xd:interfaceRef="s_axi_CTRL" xd:busTypeRef="axilite" xd:offset="0x30" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="ColorModeOut" xd:originalName="ColorModeOut" xd:direction="in" xd:interfaceRef="s_axi_CTRL" xd:busTypeRef="axilite" xd:offset="0x38" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="*(hfltCoeff)" xd:originalName="hfltCoeff" xd:direction="in" xd:interfaceRef="s_axi_CTRL" xd:busTypeRef="axilite" xd:offset="0x800" xd:dataWidth="1024"/>
+  <xd:arg xd:name="*(phasesH)" xd:originalName="phasesH" xd:direction="in" xd:interfaceRef="s_axi_CTRL" xd:busTypeRef="axilite" xd:offset="0x4000" xd:dataWidth="4096"/>
+  <xd:arg xd:name="m_axis_video" xd:originalName="m_axis_video" xd:direction="out" xd:interfaceRef="m_axis_video" xd:busTypeRef="axis" xd:dataWidth="24"/>
+  <xd:latencyEstimates xd:best-case="1128" xd:worst-case="1073971216" xd:average-case="undef"/>
+  <xd:resourceEstimates xd:LUT="5687" xd:FF="4982" xd:BRAM="0" xd:DSP="18"/>
+</xd:acceleratorMap>

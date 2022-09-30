@@ -1,0 +1,265 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'vscale_core_polyphase'" level="0">
+<item name = "Date">Mon Aug 29 12:25:41 2022
+</item>
+<item name = "Version">2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)</item>
+<item name = "Project">prj</item>
+<item name = "Solution">sol (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">5.62 ns, 4.106 ns, 1.52 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">391, 2108546, 2.199 us, 11.861 ms, 391, 2108546, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_vscale_core_polyphase_Pipeline_loop_init_coeff_phase_loop_init_coeff_tap_fu_229">vscale_core_polyphase_Pipeline_loop_init_coeff_phase_loop_init_coeff_tap, 389, 389, 2.188 us, 2.188 us, 389, 389, no</column>
+<column name="grp_vscale_core_polyphase_Pipeline_loop_width_for_procpix_fu_247">vscale_core_polyphase_Pipeline_loop_width_for_procpix, 14, 1938, 78.750 ns, 10.901 us, 14, 1938, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- loop_height">0, 2108155, 19 ~ 1943, -, -, 0 ~ 1085, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 521, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, 18, 2937, 1440, -</column>
+<column name="Memory">18, -, 96, 96, 0</column>
+<column name="Multiplexer">-, -, -, 399, -</column>
+<column name="Register">-, -, 374, -, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
+<specialColumn name="Utilization (%)">6, 8, 3, 4, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="grp_vscale_core_polyphase_Pipeline_loop_init_coeff_phase_loop_init_coeff_tap_fu_229">vscale_core_polyphase_Pipeline_loop_init_coeff_phase_loop_init_coeff_tap, 0, 0, 200, 234, 0</column>
+<column name="grp_vscale_core_polyphase_Pipeline_loop_width_for_procpix_fu_247">vscale_core_polyphase_Pipeline_loop_width_for_procpix, 0, 18, 2737, 1206, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="FiltCoeff_U">vscale_core_polyphase_FiltCoeff_RAM_1P_LUTRAM_1R1W, 0, 16, 16, 0, 64, 16, 1, 1024</column>
+<column name="FiltCoeff_1_U">vscale_core_polyphase_FiltCoeff_RAM_1P_LUTRAM_1R1W, 0, 16, 16, 0, 64, 16, 1, 1024</column>
+<column name="FiltCoeff_2_U">vscale_core_polyphase_FiltCoeff_RAM_1P_LUTRAM_1R1W, 0, 16, 16, 0, 64, 16, 1, 1024</column>
+<column name="FiltCoeff_3_U">vscale_core_polyphase_FiltCoeff_RAM_1P_LUTRAM_1R1W, 0, 16, 16, 0, 64, 16, 1, 1024</column>
+<column name="FiltCoeff_4_U">vscale_core_polyphase_FiltCoeff_RAM_1P_LUTRAM_1R1W, 0, 16, 16, 0, 64, 16, 1, 1024</column>
+<column name="FiltCoeff_5_U">vscale_core_polyphase_FiltCoeff_RAM_1P_LUTRAM_1R1W, 0, 16, 16, 0, 64, 16, 1, 1024</column>
+<column name="LineBuf_val_V_U">vscale_core_polyphase_LineBuf_val_V_RAM_AUTO_1R1W, 3, 0, 0, 0, 1920, 24, 1, 46080</column>
+<column name="LineBuf_val_V_1_U">vscale_core_polyphase_LineBuf_val_V_RAM_AUTO_1R1W, 3, 0, 0, 0, 1920, 24, 1, 46080</column>
+<column name="LineBuf_val_V_2_U">vscale_core_polyphase_LineBuf_val_V_RAM_AUTO_1R1W, 3, 0, 0, 0, 1920, 24, 1, 46080</column>
+<column name="LineBuf_val_V_3_U">vscale_core_polyphase_LineBuf_val_V_RAM_AUTO_1R1W, 3, 0, 0, 0, 1920, 24, 1, 46080</column>
+<column name="LineBuf_val_V_4_U">vscale_core_polyphase_LineBuf_val_V_RAM_AUTO_1R1W, 3, 0, 0, 0, 1920, 24, 1, 46080</column>
+<column name="LineBuf_val_V_5_U">vscale_core_polyphase_LineBuf_val_V_RAM_AUTO_1R1W, 3, 0, 0, 0, 1920, 24, 1, 46080</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="PixArrayLoc_1_fu_375_p2">+, 0, 0, 23, 16, 1</column>
+<column name="WriteLocNext_fu_475_p2">+, 0, 0, 39, 32, 1</column>
+<column name="YLoopSize_fu_314_p2">+, 0, 0, 12, 11, 2</column>
+<column name="add117_fu_509_p2">+, 0, 0, 24, 17, 2</column>
+<column name="offset_1_fu_381_p2">+, 0, 0, 39, 32, 18</column>
+<column name="offset_3_fu_471_p2">+, 0, 0, 39, 32, 32</column>
+<column name="y_2_fu_328_p2">+, 0, 0, 12, 11, 1</column>
+<column name="OutputWriteEn_1_fu_536_p2">and, 0, 0, 2, 1, 1</column>
+<column name="OutputWriteEn_fu_466_p2">and, 0, 0, 2, 1, 1</column>
+<column name="GetNewLine_1_fu_369_p2">icmp, 0, 0, 13, 16, 1</column>
+<column name="cmp119_fu_544_p2">icmp, 0, 0, 13, 17, 17</column>
+<column name="cmp159_fu_450_p2">icmp, 0, 0, 11, 11, 1</column>
+<column name="icmp124_fu_444_p2">icmp, 0, 0, 11, 9, 1</column>
+<column name="icmp_ln180_fu_304_p2">icmp, 0, 0, 11, 11, 11</column>
+<column name="icmp_ln214_fu_323_p2">icmp, 0, 0, 11, 11, 11</column>
+<column name="icmp_ln222_fu_343_p2">icmp, 0, 0, 11, 11, 2</column>
+<column name="icmp_ln241_1_fu_413_p2">icmp, 0, 0, 18, 32, 32</column>
+<column name="icmp_ln241_fu_461_p2">icmp, 0, 0, 13, 16, 1</column>
+<column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
+<column name="brmerge_fu_515_p2">or, 0, 0, 2, 1, 1</column>
+<column name="GetNewLine_2_fu_426_p3">select, 0, 0, 2, 1, 1</column>
+<column name="PhaseV_1_fu_529_p3">select, 0, 0, 8, 1, 8</column>
+<column name="PixArrayLoc_2_fu_395_p3">select, 0, 0, 16, 1, 16</column>
+<column name="PixArrayLoc_3_fu_418_p3">select, 0, 0, 16, 1, 16</column>
+<column name="TotalLines_fu_308_p3">select, 0, 0, 11, 1, 11</column>
+<column name="WriteLocNext_1_fu_480_p3">select, 0, 0, 32, 1, 32</column>
+<column name="WriteLocNext_2_fu_494_p3">select, 0, 0, 32, 1, 32</column>
+<column name="offset_2_fu_387_p3">select, 0, 0, 32, 1, 32</column>
+<column name="offset_4_fu_487_p3">select, 0, 0, 32, 1, 32</column>
+<column name="offset_5_fu_500_p3">select, 0, 0, 32, 1, 32</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="FiltCoeff_1_address0">14, 3, 6, 18</column>
+<column name="FiltCoeff_1_ce0">14, 3, 1, 3</column>
+<column name="FiltCoeff_1_we0">9, 2, 1, 2</column>
+<column name="FiltCoeff_2_address0">14, 3, 6, 18</column>
+<column name="FiltCoeff_2_ce0">14, 3, 1, 3</column>
+<column name="FiltCoeff_2_we0">9, 2, 1, 2</column>
+<column name="FiltCoeff_3_address0">14, 3, 6, 18</column>
+<column name="FiltCoeff_3_ce0">14, 3, 1, 3</column>
+<column name="FiltCoeff_3_we0">9, 2, 1, 2</column>
+<column name="FiltCoeff_4_address0">14, 3, 6, 18</column>
+<column name="FiltCoeff_4_ce0">14, 3, 1, 3</column>
+<column name="FiltCoeff_4_we0">9, 2, 1, 2</column>
+<column name="FiltCoeff_5_address0">14, 3, 6, 18</column>
+<column name="FiltCoeff_5_ce0">14, 3, 1, 3</column>
+<column name="FiltCoeff_5_we0">9, 2, 1, 2</column>
+<column name="FiltCoeff_address0">14, 3, 6, 18</column>
+<column name="FiltCoeff_ce0">14, 3, 1, 3</column>
+<column name="FiltCoeff_we0">9, 2, 1, 2</column>
+<column name="GetNewLine_reg_218">9, 2, 1, 2</column>
+<column name="HeightIn_blk_n">9, 2, 1, 2</column>
+<column name="HeightOut_blk_n">9, 2, 1, 2</column>
+<column name="HwReg_HeightOut_c_blk_n">9, 2, 1, 2</column>
+<column name="HwReg_Width_c_blk_n">9, 2, 1, 2</column>
+<column name="LineRate_blk_n">9, 2, 1, 2</column>
+<column name="OutYUV_write">9, 2, 1, 2</column>
+<column name="PhaseV_fu_118">9, 2, 8, 16</column>
+<column name="PixArrayLoc_fu_122">9, 2, 16, 32</column>
+<column name="SrcYUV_read">9, 2, 1, 2</column>
+<column name="Width_blk_n">9, 2, 1, 2</column>
+<column name="WriteLoc_fu_110">9, 2, 32, 64</column>
+<column name="ap_NS_fsm">42, 8, 1, 8</column>
+<column name="ap_done">9, 2, 1, 2</column>
+<column name="offset_fu_114">9, 2, 32, 64</column>
+<column name="y_fu_126">9, 2, 11, 22</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="GetNewLine_2_reg_679">1, 0, 1, 0</column>
+<column name="GetNewLine_reg_218">1, 0, 1, 0</column>
+<column name="InLines_reg_608">11, 0, 11, 0</column>
+<column name="InPixels_reg_603">11, 0, 11, 0</column>
+<column name="OutLines_reg_596">11, 0, 11, 0</column>
+<column name="OutputWriteEn_1_reg_720">1, 0, 1, 0</column>
+<column name="OutputWriteEn_reg_695">1, 0, 1, 0</column>
+<column name="PhaseV_fu_118">8, 0, 8, 0</column>
+<column name="PixArrayLoc_3_reg_673">16, 0, 16, 0</column>
+<column name="PixArrayLoc_fu_122">16, 0, 16, 0</column>
+<column name="Rate_reg_615">32, 0, 32, 0</column>
+<column name="WriteLocNext_2_reg_700">32, 0, 32, 0</column>
+<column name="WriteLoc_fu_110">32, 0, 32, 0</column>
+<column name="YLoopSize_reg_630">11, 0, 11, 0</column>
+<column name="add117_reg_710">17, 0, 17, 0</column>
+<column name="ap_CS_fsm">7, 0, 7, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="brmerge_reg_715">1, 0, 1, 0</column>
+<column name="cmp119_reg_730">1, 0, 1, 0</column>
+<column name="cmp159_reg_690">1, 0, 1, 0</column>
+<column name="empty_reg_725">6, 0, 6, 0</column>
+<column name="grp_vscale_core_polyphase_Pipeline_loop_init_coeff_phase_loop_init_coeff_tap_fu_229_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_vscale_core_polyphase_Pipeline_loop_width_for_procpix_fu_247_ap_start_reg">1, 0, 1, 0</column>
+<column name="icmp124_reg_685">1, 0, 1, 0</column>
+<column name="icmp_ln222_reg_644">1, 0, 1, 0</column>
+<column name="icmp_ln241_1_reg_668">1, 0, 1, 0</column>
+<column name="offset_2_reg_657">32, 0, 32, 0</column>
+<column name="offset_5_reg_705">32, 0, 32, 0</column>
+<column name="offset_fu_114">32, 0, 32, 0</column>
+<column name="tmp_6_reg_663">16, 0, 16, 0</column>
+<column name="trunc_ln_reg_652">6, 0, 6, 0</column>
+<column name="y_fu_126">11, 0, 11, 0</column>
+<column name="zext_ln177_reg_620">11, 0, 32, 21</column>
+<column name="zext_ln180_reg_625">11, 0, 17, 6</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, vscale_core_polyphase, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, vscale_core_polyphase, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, vscale_core_polyphase, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, vscale_core_polyphase, return value</column>
+<column name="ap_continue">in, 1, ap_ctrl_hs, vscale_core_polyphase, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, vscale_core_polyphase, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, vscale_core_polyphase, return value</column>
+<column name="SrcYUV_dout">in, 24, ap_fifo, SrcYUV, pointer</column>
+<column name="SrcYUV_num_data_valid">in, 5, ap_fifo, SrcYUV, pointer</column>
+<column name="SrcYUV_fifo_cap">in, 5, ap_fifo, SrcYUV, pointer</column>
+<column name="SrcYUV_empty_n">in, 1, ap_fifo, SrcYUV, pointer</column>
+<column name="SrcYUV_read">out, 1, ap_fifo, SrcYUV, pointer</column>
+<column name="HeightIn_dout">in, 11, ap_fifo, HeightIn, pointer</column>
+<column name="HeightIn_num_data_valid">in, 2, ap_fifo, HeightIn, pointer</column>
+<column name="HeightIn_fifo_cap">in, 2, ap_fifo, HeightIn, pointer</column>
+<column name="HeightIn_empty_n">in, 1, ap_fifo, HeightIn, pointer</column>
+<column name="HeightIn_read">out, 1, ap_fifo, HeightIn, pointer</column>
+<column name="Width_dout">in, 11, ap_fifo, Width, pointer</column>
+<column name="Width_num_data_valid">in, 2, ap_fifo, Width, pointer</column>
+<column name="Width_fifo_cap">in, 2, ap_fifo, Width, pointer</column>
+<column name="Width_empty_n">in, 1, ap_fifo, Width, pointer</column>
+<column name="Width_read">out, 1, ap_fifo, Width, pointer</column>
+<column name="HeightOut_dout">in, 11, ap_fifo, HeightOut, pointer</column>
+<column name="HeightOut_num_data_valid">in, 2, ap_fifo, HeightOut, pointer</column>
+<column name="HeightOut_fifo_cap">in, 2, ap_fifo, HeightOut, pointer</column>
+<column name="HeightOut_empty_n">in, 1, ap_fifo, HeightOut, pointer</column>
+<column name="HeightOut_read">out, 1, ap_fifo, HeightOut, pointer</column>
+<column name="LineRate_dout">in, 32, ap_fifo, LineRate, pointer</column>
+<column name="LineRate_num_data_valid">in, 2, ap_fifo, LineRate, pointer</column>
+<column name="LineRate_fifo_cap">in, 2, ap_fifo, LineRate, pointer</column>
+<column name="LineRate_empty_n">in, 1, ap_fifo, LineRate, pointer</column>
+<column name="LineRate_read">out, 1, ap_fifo, LineRate, pointer</column>
+<column name="vfltCoeff_address0">out, 9, ap_memory, vfltCoeff, array</column>
+<column name="vfltCoeff_ce0">out, 1, ap_memory, vfltCoeff, array</column>
+<column name="vfltCoeff_q0">in, 16, ap_memory, vfltCoeff, array</column>
+<column name="OutYUV_din">out, 24, ap_fifo, OutYUV, pointer</column>
+<column name="OutYUV_num_data_valid">in, 5, ap_fifo, OutYUV, pointer</column>
+<column name="OutYUV_fifo_cap">in, 5, ap_fifo, OutYUV, pointer</column>
+<column name="OutYUV_full_n">in, 1, ap_fifo, OutYUV, pointer</column>
+<column name="OutYUV_write">out, 1, ap_fifo, OutYUV, pointer</column>
+<column name="HwReg_Width_c_din">out, 11, ap_fifo, HwReg_Width_c, pointer</column>
+<column name="HwReg_Width_c_num_data_valid">in, 2, ap_fifo, HwReg_Width_c, pointer</column>
+<column name="HwReg_Width_c_fifo_cap">in, 2, ap_fifo, HwReg_Width_c, pointer</column>
+<column name="HwReg_Width_c_full_n">in, 1, ap_fifo, HwReg_Width_c, pointer</column>
+<column name="HwReg_Width_c_write">out, 1, ap_fifo, HwReg_Width_c, pointer</column>
+<column name="HwReg_HeightOut_c_din">out, 11, ap_fifo, HwReg_HeightOut_c, pointer</column>
+<column name="HwReg_HeightOut_c_num_data_valid">in, 2, ap_fifo, HwReg_HeightOut_c, pointer</column>
+<column name="HwReg_HeightOut_c_fifo_cap">in, 2, ap_fifo, HwReg_HeightOut_c, pointer</column>
+<column name="HwReg_HeightOut_c_full_n">in, 1, ap_fifo, HwReg_HeightOut_c, pointer</column>
+<column name="HwReg_HeightOut_c_write">out, 1, ap_fifo, HwReg_HeightOut_c, pointer</column>
+</table>
+</item>
+</section>
+</profile>
